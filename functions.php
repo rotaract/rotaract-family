@@ -22,3 +22,5 @@ require $theme_dir . '/inc/styles.php';
 require $theme_dir . '/inc/header.php';
 require $theme_dir . '/inc/footer.php';
 require $theme_dir . '/inc/misc.php';
+
+wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/assets/js/script.js' );
