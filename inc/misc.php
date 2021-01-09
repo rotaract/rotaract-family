@@ -4,13 +4,16 @@
  * set logo for backend login
  */
 function custom_login_logo() {
-  echo '<style type="text/css">
-  .login h1 a {
-    background-image:url(/wp-content/login-logo.png) !important;
-    background-size: contain;
-    width: unset;
-  }
-</style>';
+  echo sprintf(
+    '<style type="text/css">
+    .login h1 a {
+      background-image: url(%1$s) !important;
+      background-size: contain;
+      width: unset;
+    }
+    </style>',
+    get_stylesheet_directory_uri() . '/assets/img/hosting_logo.svg'
+  );
 }
 add_action('login_head', 'custom_login_logo');
 
