@@ -149,6 +149,16 @@ body.separate-containers .site-header.grid-container {
   line-height: 40px;
 }
 
+.main-navigation ul ul {
+  background-color: #fafafa !important;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.main-navigation .main-nav ul ul li:hover>a, .main-navigation .main-nav ul ul li:focus>a, .main-navigation .main-nav ul ul li.sfHover>a {
+  background-color: transparent;
+}
+
 .separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .inside-page-header, .separate-containers .sidebar .widget, .separate-containers .featured-image>img {
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
