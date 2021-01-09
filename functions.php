@@ -6,6 +6,11 @@
  * Only edit this file if you have direct access to it on your server (to fix errors if they happen).
  */
 
+define('GP_PREMIUM_VERSION', false);
+function generate_fonts_customize_register() {
+  return;
+}
+
 $family_colors = array(
   'rac'   => '#d91b5c',   // cranberry
   'iac'   => '#019fcb',   // skyblue
@@ -300,6 +305,11 @@ function generate_child_dynamic_css() {
 
   $css->set_selector( '.site-header' )->add_property( 'border-top', 'solid 2px ' . $settings['link_color'] );
   $css->set_selector( '.main-title:hover' )->add_property( 'color', $settings['link_color'] );
+
+  if ( ! generate_is_using_flexbox() && 'text' === generate_get_option( 'container_alignment' ) ) {
+    $css->set_selector( '.container.grid-container' );
+    $css->add_property( 'max-width', generate_get_option( 'container_width' ), false, 'px' );
+  }
 
   return apply_filters( 'generate_base_css_output', $css->css_output() );
 }
