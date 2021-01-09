@@ -208,3 +208,29 @@ body.separate-containers .site-header.grid-container {
   border-radius: 0;
   box-shadow: none !important;
 }
+
+
+/* Forms */
+
+.wpcf7 label, .wpcf7-form-control-wrap, input[type=text], input[type=email], input[type=url], input[type=password], input[type=search], input[type=tel], input[type=number], textarea, select {
+  width: 100%;
+}
+
+.wpcf7-form-control {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #666;
+  max-width: 100%;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.form-table, .form-table td, .form-table th {
+  border: none;
+}
+
+.otherfield {
+  width: auto !important;
+}
