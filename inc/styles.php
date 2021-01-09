@@ -8,7 +8,8 @@ function generate_child_dynamic_css() {
 
   $css = new GeneratePress_CSS();
 
-  $css->set_selector( '.site-header' )->add_property( 'border-top', 'solid 2px ' . $settings['link_color'] );
+  $css->set_selector( '#social-media-head.site-header' )->add_property( 'background-color', $settings['link_color'] );
+  $css->set_selector( '#masthead.site-header' )->add_property( 'border-top', 'solid 2px ' . $settings['link_color'] );
   $css->set_selector( '.main-title:hover' )->add_property( 'color', $settings['link_color'] );
 
   if ( ! generate_is_using_flexbox() && 'text' === generate_get_option( 'container_alignment' ) ) {

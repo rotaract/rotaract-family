@@ -5,6 +5,8 @@
  */
 add_action( 'customize_register', 'rotaract_family_controls', 11 );
 function rotaract_family_controls($wp_customize) {
+
+	// SECTION Rotaract Family
 	$wp_customize->add_section('rotaract-family', array(
 		'title'       => 'Rotaract Family',
 		'priority'    => 1,
@@ -103,6 +105,98 @@ function rotaract_family_controls($wp_customize) {
 			'settings'        => 'custom_page_js',
 			'code_type'       => 'text/html'
 		) )
+	);
+
+	// SECTION Social Media
+	$wp_customize->add_section('social-media', array(
+		'title'       => 'Social Media Links',
+		'priority'    => 2,
+		'description' => 'Füge die URL für jedes soziale Profil hinzu.'
+	) );
+	$wp_customize->add_setting('facebook');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'facebook', array(
+			'label'             => 'Facebook',
+			'section'           => 'social-media',
+			'settings'          => 'facebook',
+      'type'              => 'url'
+		) )
+	);
+	$wp_customize->add_setting('instagram');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'instagram', array(
+			'label'             => 'Instagram',
+			'section'           => 'social-media',
+			'settings'          => 'instagram',
+      'type'              => 'url'
+		) )
+	);
+	$wp_customize->add_setting('twitter');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'twitter', array(
+			'label'             => 'Twitter',
+			'section'           => 'social-media',
+			'settings'          => 'twitter',
+      'type'              => 'url'
+		) )
+	);
+	$wp_customize->add_setting('youtube');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'youtube', array(
+			'label'             => 'Youtube',
+			'section'           => 'social-media',
+			'settings'          => 'youtube',
+      'type'              => 'url'
+		) )
+	);
+	$wp_customize->add_setting('linkedin');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'linkedin', array(
+			'label'             => 'LinkedIn',
+			'section'           => 'social-media',
+			'settings'          => 'linkedin',
+      'type'              => 'url'
+		) )
+	);
+	$wp_customize->add_setting('xing');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'xing', array(
+			'label'             => 'Xing',
+			'section'           => 'social-media',
+			'settings'          => 'xing',
+      'type'              => 'url'
+		) )
+	);
+	$wp_customize->add_setting('github');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'github', array(
+			'label'             => 'Github',
+			'section'           => 'social-media',
+			'settings'          => 'github',
+      'type'              => 'url'
+		) )
+	);
+	$wp_customize->add_setting('email');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'email', array(
+			'label'             => 'E-Mail',
+			'section'           => 'social-media',
+			'settings'          => 'email',
+      'type'              => 'email'
+		) )
+	);
+}
+
+function listSocialItems() {
+	return array(
+		'facebook'		=> get_theme_mod( 'facebook', '' ),
+		'instagram'		=> get_theme_mod( 'instagram', '' ),
+		'twitter'			=> get_theme_mod( 'twitter', '' ),
+		'youtube'			=> get_theme_mod( 'youtube', '' ),
+		'linkedin'		=> get_theme_mod( 'linkedin', '' ),
+		'xing'				=> get_theme_mod( 'xing', '' ),
+		'github'			=> get_theme_mod( 'github', '' ),
+		'email'				=> get_theme_mod( 'email', '' )
 	);
 }
 

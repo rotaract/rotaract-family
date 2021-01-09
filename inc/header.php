@@ -1,5 +1,32 @@
 <?php
 
+add_action( 'generate_before_header', 'generate_social_menu', 4 );
+function generate_social_menu() {
+  $items = array_filter( listSocialItems(), function($e) { return !empty($e); } );
+
+  if ( empty($items) ) {
+    return;
+  }
+  ?>
+  <div id="social-media-head" <?php generate_do_element_classes( 'header' ); ?>>
+    <div <?php generate_do_element_classes( 'inside_header' ); ?>>
+      <div class="social-media-menu">
+        <?php
+        foreach ($items as $type => $link) {
+          echo sprintf(
+            '<a href="%2$s" title="%1$s" target="_blank" class="social-media-link"><img src="%3$s" /></a>',
+            ucfirst($type),
+            'email' === $type ? 'mailto:' . antispambot(is_email( $link )) : $link,
+            get_stylesheet_directory_uri() . '/assets/img/socialmedia/' . $type . '.svg'
+          );
+        }
+        ?>
+      </div>
+    </div>
+  </div>
+  <?php
+}
+
 /**
  * Override site title construction for building Rotaract/Rotary/Interact logos
  */
@@ -81,4 +108,11 @@ function generate_construct_site_title() {
       echo '</div>';
     }
   }
+}
+
+/**
+ * Prevent building the header widget.
+ */
+function generate_construct_header_widget() {
+  return;
 }
