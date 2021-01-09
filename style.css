@@ -103,8 +103,14 @@ body, h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
 
+/* Header */
+
 .site-header {
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.site-header.grid-container {
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .site-branding {
@@ -116,6 +122,7 @@ body, h1, h2, h3, h4, h5, h6 {
 	align-items: center;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+  height: 40px;
 	max-width: 80vw;
 	overflow: visible;
 }
@@ -134,7 +141,18 @@ body, h1, h2, h3, h4, h5, h6 {
 	font-size: 16px;
 }
 
+.main-navigation .main-nav ul li a {
+  line-height: 40px;
+}
+
 .separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header, .sidebar .widget, .featured-image>img {
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+
+/* Content */
+
+.cmplz-blocked-content-container {
+  box-shadow: none !important;
 }
