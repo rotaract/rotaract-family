@@ -114,16 +114,36 @@ function rotaract_family_controls($wp_customize) {
       'type'              => 'text'
 		) )
 	);
-	$wp_customize->add_setting('privacy_link', array(
-		'default' => 'https://rotaract.de/datenschutz'
+	$wp_customize->add_setting('contact_page');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'contact_page', array(
+			'label'          => 'Seite für das Kontaktformular',
+			'description'    => 'Gib hier an, auf welcher Seite dein Kontaktformular zu finden ist. Standard: "/kontakt".',
+			'section'        => 'rotaract-family',
+			'settings'       => 'contact_page',
+			'type'           => 'dropdown-pages'
+		) )
+	);
+	$wp_customize->add_setting('impress_page');
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'impress_page', array(
+			'label'          => 'Seite für das Impressum',
+			'description'    => 'Gib hier an, auf welcher Seite dein Impressum zu finden ist. Standard: "/impressum". Eine Vorlage für ein Impressum findest du im Wiki.',
+			'section'        => 'rotaract-family',
+			'settings'       => 'impress_page',
+			'type'           => 'dropdown-pages'
+		) )
+	);
+	$wp_customize->add_setting('own_privacy_page', array(
+		'default' => false
 	) );
 	$wp_customize->add_control(
-		new WP_Customize_Control($wp_customize, 'privacy_link', array(
-			'label'          => 'Datenschutz-Seite',
-			'description'    => 'Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Falls du weiter unten zusätzliche Scripte benutzt, musst du ggf. eine eigene Datenschutzerklärung schreiben und hier verknüpfen.',
+		new WP_Customize_Control($wp_customize, 'own_privacy_page', array(
+			'label'          => 'Eigene Datenschutz-Seite?',
+			'description'    => 'Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Falls du weiter unten zusätzliche Scripte benutzt, musst du ggf. eine eigene Datenschutzerklärung schreiben und in Einstellungen / Datenschutz auswählen.',
 			'section'        => 'rotaract-family',
-			'settings'       => 'privacy_link',
-			'type'           => 'text'
+			'settings'       => 'own_privacy_page',
+			'type'           => 'checkbox'
 		) )
 	);
 	$wp_customize->add_setting('custom_page_css', array(
@@ -294,4 +314,28 @@ function generate_enqueue_child_dynamic_css() {
   wp_register_style( 'child-generated-style', false );
   wp_enqueue_style( 'child-generated-style' );
 	wp_add_inline_style( 'child-generated-style', wp_strip_all_tags( $css ) );
+}
+
+add_action( 'generate_credits', 'generate_add_footer_info' );
+/**
+ * Add the copyright to the footer
+ *
+ * @since 0.1
+ */
+function generate_add_footer_info() {
+  $copyright = sprintf(
+    '<div>
+    <a href="%3$s" title="Kontakt">Kontakt</a> |
+    <a href="%4$s" title="Datenschutz">Datenschutz</a> |
+    <a href="%5$s" title="Impressum">Impressum</a>
+    </div>
+    <div class="copyright">&copy; %1$s %2$s</div>',
+    date( 'Y' ), // phpcs:ignore
+    get_bloginfo( 'name' ),
+    get_theme_mod('contact_page') ? get_permalink(get_theme_mod('contact_page')) : '/kontakt',
+    get_theme_mod('own_privacy_page') ? get_privacy_policy_url() : 'https://rotaract.de/datenschutz',
+    get_theme_mod('impress_page') ? get_permalink(get_theme_mod('impress_page')) : '/impressum'
+  );
+
+  echo apply_filters( 'generate_copyright', $copyright ); // phpcs:ignore
 }
