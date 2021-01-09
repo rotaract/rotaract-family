@@ -182,5 +182,6 @@ body.separate-containers .site-header.grid-container {
 /* Content */
 
 .cmplz-blocked-content-container {
+  border-radius: 0;
   box-shadow: none !important;
 }
