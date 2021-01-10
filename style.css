@@ -97,10 +97,13 @@
 /*
  * Child theme stylings
  */
+ 
+ html, body {
+   font-size: 15px;
+ }
 
 body, h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Header */
@@ -189,6 +192,10 @@ body.separate-containers .site-header.grid-container {
 
 
 /* Footer */
+
+footer.site-info {
+  font-size: 13px;
+}
 
 @media (min-width: 769px) {
   .separate-containers .site-footer.grid-container .site-info {
