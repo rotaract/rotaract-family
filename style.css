@@ -5,7 +5,7 @@
  Author:       Niklas A. Zbick - Rotaract Deutschland Komitee, Ressort IT Entwicklung
  Author URI:   https://rotaract.de/ueber-rotaract/rdk/ressort-it-entwicklung/
  Template:     generatepress
- Version:      0.2
+ Version:      0.3
 */
 
 /*
@@ -98,7 +98,7 @@
  * Child theme stylings
  */
  
- html, body {
+ html, body, .sidebar .widget, .footer-widgets .widget {
    font-size: 15px;
  }
 
