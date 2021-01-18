@@ -8,18 +8,21 @@ add_action( 'generate_credits', 'generate_add_footer_info' );
  */
 function generate_add_footer_info() {
   $copyright = sprintf(
-    '<div>
-    <a href="%3$s" title="Kontakt">Kontakt</a> |
-    <a href="%4$s" title="Datenschutz">Datenschutz</a> |
-    <a href="%5$s" title="Impressum">Impressum</a>
-    </div>
-    <div class="copyright">&copy; %1$s %2$s</div>',
+    '<div class="copyright">&copy; %1$s %2$s</div>',
     date( 'Y' ), // phpcs:ignore
-    get_bloginfo( 'name' ),
-    get_theme_mod('contact_page') ? get_permalink(get_theme_mod('contact_page')) : '/kontakt',
-    get_theme_mod('own_privacy_page') ? get_privacy_policy_url() : 'https://rotaract.de/datenschutz',
+    get_theme_mod('copyright')
+  );
+  $contact = get_theme_mod('contact_page') ? sprintf(
+    '<a href="%1$s" title="Kontakt">Kontakt</a> | ',
+    get_permalink(get_theme_mod('contact_page'))
+  ) : '';
+  $legals = sprintf(
+    '<a href="%1$s" title="Datenschutz">Datenschutz</a> |
+    <a href="%2$s" title="Impressum">Impressum</a>',
+    get_privacy_policy_url() ?: 'https://rotaract.de/datenschutz',
     get_theme_mod('impress_page') ? get_permalink(get_theme_mod('impress_page')) : '/impressum'
   );
+  $text = $copyright . '<div>' . $contact . $legals . '</div>';
 
-  echo apply_filters( 'generate_copyright', $copyright ); // phpcs:ignore
+  echo apply_filters( 'generate_copyright', $text ); // phpcs:ignore
 }

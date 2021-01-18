@@ -7,10 +7,10 @@ add_action( 'customize_register', 'rotaract_family_controls', 11 );
 function rotaract_family_controls($wp_customize) {
 
 	// SECTION Rotaract Family
-	$wp_customize->add_section('rotaract-family', array(
-		'title'       => 'Rotaract Family',
-		'priority'    => 1,
-		'description' => 'Theme-Einstellungen für Rotaract'
+	$wp_customize->add_section('logo', array(
+		'title'       => 'Logo',
+		'priority'    => 21,
+		'description' => 'Passe das Logo an.'
 	) );
 	$wp_customize->add_setting('org_type', array(
 		'default' => 'rac'
@@ -18,13 +18,14 @@ function rotaract_family_controls($wp_customize) {
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'org_type', array(
 			'label'          => 'Organisation',
-			'section'        => 'rotaract-family',
+			'description'    => 'Diese Einstellung setzt auch die Default-Farbe der Seite.',
+			'section'        => 'logo',
 			'settings'       => 'org_type',
 			'type'           => 'radio',
 			'choices'        => array(
-        'rac'   => 'Rotaract',
-        'iac'   => 'Interact',
-        'rc'    => 'Rotary'
+			  'rac'   => 'Rotaract',
+		    'iac'   => 'Interact',
+		    'rc'    => 'Rotary'
       )
 		) )
 	);
@@ -34,9 +35,9 @@ function rotaract_family_controls($wp_customize) {
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'logo_text_line_1', array(
 			'label'             => 'Logo Zeile 1',
-			'section'           => 'rotaract-family',
+			'section'           => 'logo',
 			'settings'          => 'logo_text_line_1',
-      'type'              => 'text'
+			'type'              => 'text'
 		) )
 	);
 	$wp_customize->add_setting('logo_text_line_2', array(
@@ -45,19 +46,39 @@ function rotaract_family_controls($wp_customize) {
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'logo_text_line_2', array(
 			'label'             => 'Logo Zeile 2',
-			'section'           => 'rotaract-family',
+			'section'           => 'logo',
 			'settings'          => 'logo_text_line_2',
       'type'              => 'text'
+		) )
+	);
+
+	// SECTION Footer Options
+	$wp_customize->add_section('footer-options', array(
+		'title'       => 'Fußzeile',
+		'priority'    => 30,
+		'description' => '<p>Inhalte der Fußzeile anpassen</p>
+							<p><span class="customize-control-title">Datenschutz</span>Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Es empfiehlt sich aber, eine eigene Datenschutzseite anzulegen. Das kannst du <a href="/wp-admin/options-privacy.php" class="external-link" target="_blank">hier</a> tun. Eine Vorlage für deine Datenschutzerklärung findest du im Wiki von Rotaract Deutschland.</p>'
+	) );
+	$wp_customize->add_setting('copyright', array(
+		'default' => get_bloginfo( 'name' )
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'copyright', array(
+			'label'          => 'Copyright',
+			'section'        => 'footer-options',
+			'settings'       => 'copyright',
+      'type'           => 'text'
 		) )
 	);
 	$wp_customize->add_setting('contact_page');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'contact_page', array(
 			'label'          => 'Seite für das Kontaktformular',
-			'description'    => 'Gib hier an, auf welcher Seite dein Kontaktformular zu finden ist. Standard: "/kontakt".',
-			'section'        => 'rotaract-family',
+			'description'    => 'Gib hier an, auf welcher Seite dein Kontaktformular zu finden ist.',
+			'section'        => 'footer-options',
 			'settings'       => 'contact_page',
-			'type'           => 'dropdown-pages'
+			'type'           => 'dropdown-pages',
+			'allow_addition' => true
 		) )
 	);
 	$wp_customize->add_setting('impress_page');
@@ -65,124 +86,106 @@ function rotaract_family_controls($wp_customize) {
 		new WP_Customize_Control($wp_customize, 'impress_page', array(
 			'label'          => 'Seite für das Impressum',
 			'description'    => 'Gib hier an, auf welcher Seite dein Impressum zu finden ist. Standard: "/impressum". Eine Vorlage für ein Impressum findest du im Wiki.',
-			'section'        => 'rotaract-family',
+			'section'        => 'footer-options',
 			'settings'       => 'impress_page',
-			'type'           => 'dropdown-pages'
-		) )
-	);
-	$wp_customize->add_setting('own_privacy_page', array(
-		'default' => false
-	) );
-	$wp_customize->add_control(
-		new WP_Customize_Control($wp_customize, 'own_privacy_page', array(
-			'label'          => 'Eigene Datenschutz-Seite?',
-			'description'    => 'Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Falls du weiter unten zusätzliche Scripte benutzt, musst du ggf. eine eigene Datenschutzerklärung schreiben und in Einstellungen / Datenschutz auswählen.',
-			'section'        => 'rotaract-family',
-			'settings'       => 'own_privacy_page',
-			'type'           => 'checkbox'
-		) )
-	);
-	$wp_customize->add_setting('custom_page_css', array(
-		'default' => ''
-	) );
-	$wp_customize->add_control(
-		new WP_Customize_Code_Editor_Control($wp_customize, 'custom_page_css', array(
-			'label'           => 'Eigenes CSS',
-			'description'     => 'Trage hier eigenes CSS ein, um deine Seite optisch anzupassen.',
-			'section'         => 'rotaract-family',
-			'settings'        => 'custom_page_css',
-			'code_type'       => 'text/css'
-		) )
-	);
-	$wp_customize->add_setting('custom_page_js', array(
-		'default' => ''
-	) );
-	$wp_customize->add_control(
-		new WP_Customize_Code_Editor_Control($wp_customize, 'custom_page_js', array(
-			'label'           => 'Eigenes Javascript',
-			'description'     => 'Trage hier eigenen Javascript-Code ein. Dieser wird am Ende des &lt;body&gt; Tag eingefügt. Vergiss nicht, &lt;script&gt; Tags zu setzen. <strong>Benutzung auf eigene Gefahr! Pass bitte deine Datenschutzerklärung entsprechend an, falls du hier externe Scripte einbindest.</strong>',
-			'section'         => 'rotaract-family',
-			'settings'        => 'custom_page_js',
-			'code_type'       => 'text/html'
+			'type'           => 'dropdown-pages',
+			'allow_addition' => true
 		) )
 	);
 
 	// SECTION Social Media
 	$wp_customize->add_section('social-media', array(
-		'title'       => 'Social Media Links',
-		'priority'    => 2,
-		'description' => 'Füge die URL für jedes soziale Profil hinzu.'
+		'title'         => 'Social Media Links',
+		'priority'      => 25,
+		'description'   => 'Füge die URL für jedes soziale Profil hinzu.'
 	) );
 	$wp_customize->add_setting('facebook');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'facebook', array(
-			'label'             => 'Facebook',
-			'section'           => 'social-media',
-			'settings'          => 'facebook',
-      'type'              => 'url'
+			'label'       => 'Facebook',
+			'section'     => 'social-media',
+			'settings'    => 'facebook',
+      'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('instagram');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'instagram', array(
-			'label'             => 'Instagram',
-			'section'           => 'social-media',
-			'settings'          => 'instagram',
-      'type'              => 'url'
+			'label'       => 'Instagram',
+			'section'     => 'social-media',
+			'settings'    => 'instagram',
+      'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('twitter');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'twitter', array(
-			'label'             => 'Twitter',
-			'section'           => 'social-media',
-			'settings'          => 'twitter',
-      'type'              => 'url'
+			'label'       => 'Twitter',
+			'section'     => 'social-media',
+			'settings'    => 'twitter',
+      'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('youtube');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'youtube', array(
-			'label'             => 'Youtube',
-			'section'           => 'social-media',
-			'settings'          => 'youtube',
-      'type'              => 'url'
+			'label'       => 'Youtube',
+			'section'     => 'social-media',
+			'settings'    => 'youtube',
+      'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('linkedin');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'linkedin', array(
-			'label'             => 'LinkedIn',
-			'section'           => 'social-media',
-			'settings'          => 'linkedin',
-      'type'              => 'url'
+			'label'       => 'LinkedIn',
+			'section'     => 'social-media',
+			'settings'    => 'linkedin',
+      'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('xing');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'xing', array(
-			'label'             => 'Xing',
-			'section'           => 'social-media',
-			'settings'          => 'xing',
-      'type'              => 'url'
+			'label'       => 'Xing',
+			'section'     => 'social-media',
+			'settings'    => 'xing',
+      'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('github');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'github', array(
-			'label'             => 'Github',
-			'section'           => 'social-media',
-			'settings'          => 'github',
-      'type'              => 'url'
+			'label'       => 'Github',
+			'section'     => 'social-media',
+			'settings'    => 'github',
+      'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('email');
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'email', array(
-			'label'             => 'E-Mail',
-			'section'           => 'social-media',
-			'settings'          => 'email',
-      'type'              => 'email'
+			'label'       => 'E-Mail',
+			'section'     => 'social-media',
+			'settings'    => 'email',
+      'type'        => 'email'
+		) )
+	);
+
+	// SECTION Own Javascript
+	$wp_customize->add_section('own-javascript', array(
+    'title'         => 'Zusätzliches JS',
+    'priority'      => 201,
+    'description'   => 'Trage hier eigenen Javascript-Code ein. Dieser wird am Ende des &lt;body&gt;-Tag eingefügt. Vergiss nicht, &lt;script&gt;-Tags zu setzen. <strong>Benutzung auf eigene Gefahr! Pass bitte deine Datenschutzerklärung entsprechend an, falls du hier externe Scripte einbindest.</strong>'
+	) );
+	$wp_customize->add_setting('custom_page_js', array(
+		'default' => ''
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Code_Editor_Control($wp_customize, 'custom_page_js', array(
+			'section'     => 'own-javascript',
+			'settings'    => 'custom_page_js',
+			'code_type'   => 'text/html'
 		) )
 	);
 }
@@ -191,23 +194,13 @@ function listSocialItems() {
 	return array(
 		'facebook'		=> get_theme_mod( 'facebook', '' ),
 		'instagram'		=> get_theme_mod( 'instagram', '' ),
-		'twitter'			=> get_theme_mod( 'twitter', '' ),
-		'youtube'			=> get_theme_mod( 'youtube', '' ),
+		'twitter'		  => get_theme_mod( 'twitter', '' ),
+		'youtube'		  => get_theme_mod( 'youtube', '' ),
 		'linkedin'		=> get_theme_mod( 'linkedin', '' ),
-		'xing'				=> get_theme_mod( 'xing', '' ),
-		'github'			=> get_theme_mod( 'github', '' ),
-		'email'				=> get_theme_mod( 'email', '' )
+		'xing'			  => get_theme_mod( 'xing', '' ),
+		'github'		  => get_theme_mod( 'github', '' ),
+		'email'			  => get_theme_mod( 'email', '' )
 	);
-}
-
-/**
- * print custom css
- */
-if( ! empty( get_theme_mod( 'custom_page_css' ) ) ) {
-  add_action( 'wp_head', 'custom_page_css' );
-  function custom_page_css() {
-    echo '<style type="text/css" id="custom-theme-css">' . get_theme_mod( 'custom_page_css' ) . '</style>';
-  }
 }
 
 /**
