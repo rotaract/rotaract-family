@@ -221,6 +221,11 @@ footer.site-info {
 
 /* Content */
 
+#page.grid-parent, .page-header-image.grid-parent {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .cmplz-blocked-content-container {
   border-radius: 0;
   box-shadow: none !important;
