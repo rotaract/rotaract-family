@@ -18,7 +18,7 @@ function rotaract_family_controls($wp_customize) {
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'org_type', array(
 			'label'          => 'Organisation',
-			'description'    => 'Diese Einstellung setzt auch die Default-Farbe der Seite.',
+			'description'    => 'Diese Einstellung setzt auch die Default-Farbe der Seite. Dafür muss die Seite nach dem Veröffentlichen <a href="javascript:location.reload();">neu geladen werden</a>.',
 			'section'        => 'logo',
 			'settings'       => 'org_type',
 			'type'           => 'radio',
