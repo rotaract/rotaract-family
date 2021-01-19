@@ -11,7 +11,7 @@ You can activate it on an existing website in your Wordpress backend in **Design
 
 ### In your own Wordpress project
 
-1. Download latest zip file.
+1. Download [latest zip file](https://github.com/rotaract/rotaract-family/releases/latest).
 2. Use the manual theme installation within your backend and choose the downloaded file.
 
 ## Customizing
