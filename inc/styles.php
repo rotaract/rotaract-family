@@ -13,6 +13,7 @@ function generate_child_dynamic_css() {
   $css->set_selector( '.main-title:hover' )->add_property( 'color', $settings['link_color'] );
   $css->set_selector( '.main-navigation .main-nav ul ul li:hover>a, .main-navigation .main-nav ul ul li:focus>a, .main-navigation .main-nav ul ul li.sfHover>a' )->add_property( 'color', $settings['link_color'] );
   $css->set_selector( 'button, html input[type=button], input[type=reset], input[type=submit], a.button, a.wp-block-button__link:not(.has-background)' )->add_property( 'background-color', $settings['link_color'] );
+  $css->set_selector( '.main-navigation .main-nav ul li:hover>a, .main-navigation .main-nav ul li:focus>a, .main-navigation .main-nav ul li.sfHover>a, .main-navigation .menu-bar-item:hover>a, .main-navigation .menu-bar-item.sfHover>a' )->add_property( 'color', $settings['link_color'] );
 
   if ( ! generate_is_using_flexbox() && 'text' === generate_get_option( 'container_alignment' ) ) {
     $css->set_selector( '.container.grid-container' );

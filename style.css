@@ -1,6 +1,6 @@
 /*
  Theme Name:   Rotaract Family
- Theme URI:    https://rotaract.de
+ Theme URI:    https://github.com/rotaract/rotaract-family
  Description:  Rotaract generatepress child theme for Rotaract, Interact & Rotary clubs/districts/projects
  Author:       Niklas A. Zbick - Rotaract Deutschland Komitee, Ressort IT Entwicklung
  Author URI:   https://rotaract.de/ueber-rotaract/rdk/ressort-it-entwicklung/
@@ -108,7 +108,8 @@ body, h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 
-#masthead.site-header {
+body:not(.nav-below-header) #masthead.site-header,
+body.nav-below-header #site-navigation.main-navigation {
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
