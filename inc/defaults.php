@@ -11,8 +11,10 @@ add_filter( 'generate_option_defaults', 'child_new_defaults' );
  * Override parent defaults
  */
 function child_new_defaults( $options ) {
+  $options['org_type'] = 'rac';
+  $options['logo_text_line_1'] = get_bloginfo( 'title' );
   $options['background_color'] = '#f4f4f4';
-  $options['link_color'] = $GLOBALS[ 'family_colors' ][ get_theme_mod( 'org_type' ) ];
+  $options['link_color'] = $GLOBALS[ 'family_colors' ][ get_theme_mod( 'org_type', 'rac' ) ];
 
   return $options;
 }

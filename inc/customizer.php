@@ -13,6 +13,7 @@ function rotaract_family_controls($wp_customize) {
 		'description' => 'Passe das Logo an.'
 	) );
 	$wp_customize->add_setting('org_type', array(
+	  'type'    => 'theme_mod',
 		'default' => 'rac'
 	) );
 	$wp_customize->add_control(
@@ -30,6 +31,7 @@ function rotaract_family_controls($wp_customize) {
 		) )
 	);
 	$wp_customize->add_setting('logo_text_line_1', array(
+	  'type'    => 'theme_mod',
 		'default' => get_bloginfo( 'title' )
 	) );
 	$wp_customize->add_control(
@@ -41,6 +43,7 @@ function rotaract_family_controls($wp_customize) {
 		) )
 	);
 	$wp_customize->add_setting('logo_text_line_2', array(
+	  'type'    => 'theme_mod',
 		'default' => ''
 	) );
 	$wp_customize->add_control(
@@ -60,6 +63,7 @@ function rotaract_family_controls($wp_customize) {
 							<p><span class="customize-control-title">Datenschutz</span>Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Es empfiehlt sich aber, eine eigene Datenschutzseite anzulegen. Das kannst du <a href="/wp-admin/options-privacy.php" class="external-link" target="_blank">hier</a> tun. Eine Vorlage für deine Datenschutzerklärung findest du im Wiki von Rotaract Deutschland.</p>'
 	) );
 	$wp_customize->add_setting('copyright', array(
+	  'type'    => 'theme_mod',
 		'default' => get_bloginfo( 'name' )
 	) );
 	$wp_customize->add_control(
@@ -70,7 +74,9 @@ function rotaract_family_controls($wp_customize) {
       'type'           => 'text'
 		) )
 	);
-	$wp_customize->add_setting('contact_page');
+	$wp_customize->add_setting('contact_page', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'contact_page', array(
 			'label'          => 'Seite für das Kontaktformular',
@@ -81,7 +87,9 @@ function rotaract_family_controls($wp_customize) {
 			'allow_addition' => true
 		) )
 	);
-	$wp_customize->add_setting('impress_page');
+	$wp_customize->add_setting('impress_page', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'impress_page', array(
 			'label'          => 'Seite für das Impressum',
@@ -99,7 +107,9 @@ function rotaract_family_controls($wp_customize) {
 		'priority'      => 25,
 		'description'   => 'Füge die URL für jedes soziale Profil hinzu.'
 	) );
-	$wp_customize->add_setting('facebook');
+	$wp_customize->add_setting('facebook', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'facebook', array(
 			'label'       => 'Facebook',
@@ -108,7 +118,9 @@ function rotaract_family_controls($wp_customize) {
       'type'        => 'url'
 		) )
 	);
-	$wp_customize->add_setting('instagram');
+	$wp_customize->add_setting('instagram', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'instagram', array(
 			'label'       => 'Instagram',
@@ -117,7 +129,9 @@ function rotaract_family_controls($wp_customize) {
       'type'        => 'url'
 		) )
 	);
-	$wp_customize->add_setting('twitter');
+	$wp_customize->add_setting('twitter', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'twitter', array(
 			'label'       => 'Twitter',
@@ -126,7 +140,9 @@ function rotaract_family_controls($wp_customize) {
       'type'        => 'url'
 		) )
 	);
-	$wp_customize->add_setting('youtube');
+	$wp_customize->add_setting('youtube', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'youtube', array(
 			'label'       => 'Youtube',
@@ -135,7 +151,9 @@ function rotaract_family_controls($wp_customize) {
       'type'        => 'url'
 		) )
 	);
-	$wp_customize->add_setting('linkedin');
+	$wp_customize->add_setting('linkedin', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'linkedin', array(
 			'label'       => 'LinkedIn',
@@ -144,7 +162,9 @@ function rotaract_family_controls($wp_customize) {
       'type'        => 'url'
 		) )
 	);
-	$wp_customize->add_setting('xing');
+	$wp_customize->add_setting('xing', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'xing', array(
 			'label'       => 'Xing',
@@ -153,7 +173,9 @@ function rotaract_family_controls($wp_customize) {
       'type'        => 'url'
 		) )
 	);
-	$wp_customize->add_setting('github');
+	$wp_customize->add_setting('github', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'github', array(
 			'label'       => 'Github',
@@ -162,7 +184,9 @@ function rotaract_family_controls($wp_customize) {
       'type'        => 'url'
 		) )
 	);
-	$wp_customize->add_setting('email');
+	$wp_customize->add_setting('email', array(
+	  'type'    => 'theme_mod'
+  ));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'email', array(
 			'label'       => 'E-Mail',

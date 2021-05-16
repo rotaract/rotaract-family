@@ -39,9 +39,9 @@ function generate_construct_site_title() {
   // Get the title and tagline.
   $title = get_bloginfo( 'title' );
   $tagline = get_bloginfo( 'description' );
-  $logo = get_stylesheet_directory_uri() . '/assets/img/' . get_theme_mod( 'org_type' ) . '_logo.svg';
+  $logo = get_stylesheet_directory_uri() . '/assets/img/' . get_theme_mod( 'org_type', 'rac' ) . '_logo.svg';
   $logo_text_lines_count = !empty( get_theme_mod( 'logo_text_line_2' ) ) ? 2 : 1;
-  $logo_text = get_theme_mod( 'logo_text_line_1' );
+  $logo_text = get_theme_mod( 'logo_text_line_1', get_bloginfo( 'title' ) );
   if ( $logo_text_lines_count > 1 ) {
     $logo_text .= '<br>' . get_theme_mod( 'logo_text_line_2' );
   }
