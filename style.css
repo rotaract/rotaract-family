@@ -141,12 +141,39 @@ body.separate-containers .site-header.grid-container {
 }
 
 .main-title .title-text {
+  display: flex;
+  flex-direction: column;
 	font-size: 20px;
+  justify-content: space-between;
   line-height: 1.1em;
 }
 
 .main-title .title-text.lines-2 {
 	font-size: 16px;
+}
+
+.main-title.club img {
+  align-self: start;
+  order: 2;
+}
+
+.main-title.club .title-text {
+  align-self: start;
+  flex-direction: column-reverse;
+  font-size: 12px;
+  margin-right: -77px;
+  margin-top: -5px;
+  min-width: 77px;
+  padding-top: 1px;
+  text-align: right;
+}
+
+.main-title.club .title-text .line-primary {
+  margin-top: 22px;
+}
+
+.main-title.club .title-text .line-secondary {
+  min-height: 13px;
 }
 
 .main-navigation .main-nav ul li a {

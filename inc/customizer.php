@@ -30,6 +30,23 @@ function rotaract_family_controls($wp_customize) {
       )
 		) )
 	);
+	$wp_customize->add_setting('logo_layout', array(
+	  'type'    => 'theme_mod',
+		'default' => 'club'
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Control($wp_customize, 'logo_layout', array(
+			'label'          => 'Logo-Layout',
+			'description'    => 'Lege das Layout des Logos fest.',
+			'section'        => 'logo',
+			'settings'       => 'logo_layout',
+			'type'           => 'radio',
+			'choices'        => array(
+			  'club'   => 'Club',
+		    'partner'   => 'Partner'
+      )
+		) )
+	);
 	$wp_customize->add_setting('logo_text_line_1', array(
 	  'type'    => 'theme_mod',
 		'default' => get_bloginfo( 'title' )

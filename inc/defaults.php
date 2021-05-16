@@ -11,6 +11,7 @@ add_filter( 'generate_option_defaults', 'child_new_defaults' );
  * Override parent defaults
  */
 function child_new_defaults( $options ) {
+  $options['logo_layout'] = 'club';
   $options['org_type'] = 'rac';
   $options['logo_text_line_1'] = get_bloginfo( 'title' );
   $options['background_color'] = '#f4f4f4';

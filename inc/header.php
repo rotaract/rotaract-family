@@ -39,7 +39,7 @@ function generate_construct_site_title() {
   // Get the title and tagline.
   $title = get_bloginfo( 'title' );
   $tagline = get_bloginfo( 'description' );
-  $logo = get_stylesheet_directory_uri() . '/assets/img/' . get_theme_mod( 'org_type', 'rac' ) . '_logo.svg';
+  $logo = get_stylesheet_directory_uri() . '/assets/img/' . get_theme_mod( 'org_type', 'rac' ) . '_logo' . (get_theme_mod( 'logo_layout', 'club' ) !== 'club' ? '_a' : '' ) . '.svg';
   $logo_text_lines_count = !empty( get_theme_mod( 'logo_text_line_2' ) ) ? 2 : 1;
   $logo_text = get_theme_mod( 'logo_text_line_1', get_bloginfo( 'title' ) );
   if ( $logo_text_lines_count > 1 ) {
@@ -52,23 +52,23 @@ function generate_construct_site_title() {
   // If the disable tagline checkbox is checked, or the tagline field is empty, return true.
   $disable_tagline = ( '1' == $generate_settings['hide_tagline'] || '' == $tagline ) ? true : false;  // phpcs:ignore
 
-  $schema_type = generate_get_schema_type();
-
   // Build our site title.
   $site_title = apply_filters(
     'generate_site_title_output',
     sprintf(
-      '<a href="%1$s" class="main-title" rel="home">
+      '<a href="%1$s" class="main-title %6$s" rel="home">
         <img src="%2$s" title="%3$s">
-        <div class="title-text lines-%4$s"%5$s>
-            %3$s
+        <div class="title-text lines-%5$s">
+            <div class="line-primary">%3$s</div>
+            <div class="line-secondary">%4$s</div>
         </div>
       </a>',
       esc_url( apply_filters( 'generate_site_title_href', home_url( '/' ) ) ),
       $logo,
-      $logo_text,
+      get_theme_mod( 'logo_text_line_1', get_bloginfo( 'title' ) ),
+      get_theme_mod( 'logo_text_line_2' ),
       $logo_text_lines_count,
-      'microdata' === generate_get_schema_type() ? ' itemprop="headline"' : ''
+      get_theme_mod( 'logo_layout', 'club' )
     )
   );
 
