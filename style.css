@@ -141,12 +141,12 @@ body.separate-containers .site-header.grid-container {
   padding-right: 55px;
 }
 
-.main-title img {
+.main-title svg.logo {
 	width: auto;
 	height: 38px;
 }
 
-.main-title.club img {
+.main-title.club svg.logo {
   position: absolute;
   right: 0;
   top: 6px;
@@ -172,7 +172,7 @@ body.separate-containers .site-header.grid-container {
   align-self: start;
   flex-direction: column-reverse;
   font-size: 12px;
-  min-width: 77px;
+  min-width: 80px;
   padding-top: 1px;
   text-align: right;
   white-space: normal !important;
