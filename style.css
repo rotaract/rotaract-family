@@ -121,6 +121,10 @@ body.separate-containers .site-header.grid-container {
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
+.inside-header {
+    padding: 20px 40px 15px;
+}
+
 .site-branding {
   flex-shrink: 0;
 }
@@ -138,6 +142,7 @@ body.separate-containers .site-header.grid-container {
 
 .main-title.club {
 	display: block;
+  margin-top: -6px;
   padding-right: 55px;
 }
 
