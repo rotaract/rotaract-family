@@ -53,7 +53,7 @@ function rotaract_family_controls($wp_customize) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'logo_text_line_1', array(
-			'label'             => 'Logo Zeile 1',
+			'label'             => 'Text Primär',
 			'section'           => 'logo',
 			'settings'          => 'logo_text_line_1',
 			'type'              => 'text'
@@ -65,7 +65,7 @@ function rotaract_family_controls($wp_customize) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'logo_text_line_2', array(
-			'label'             => 'Logo Zeile 2',
+			'label'             => 'Text Sekundär',
 			'section'           => 'logo',
 			'settings'          => 'logo_text_line_2',
       'type'              => 'text'

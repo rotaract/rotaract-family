@@ -133,11 +133,23 @@ body.separate-containers .site-header.grid-container {
   height: 40px;
 	max-width: 80vw;
 	overflow: visible;
+  position: relative;
+}
+
+.main-title.club {
+	display: block;
+  padding-right: 55px;
 }
 
 .main-title img {
 	width: auto;
 	height: 38px;
+}
+
+.main-title.club img {
+  position: absolute;
+  right: 0;
+  top: 6px;
 }
 
 .main-title .title-text {
@@ -148,32 +160,37 @@ body.separate-containers .site-header.grid-container {
   line-height: 1.1em;
 }
 
-.main-title .title-text.lines-2 {
-	font-size: 16px;
+.main-title .title-text.lines-1 {
+  white-space: nowrap;
 }
 
-.main-title.club img {
-  align-self: start;
-  order: 2;
+.main-title .title-text.lines-2 {
+	font-size: 16px;
 }
 
 .main-title.club .title-text {
   align-self: start;
   flex-direction: column-reverse;
   font-size: 12px;
-  margin-right: -77px;
-  margin-top: -5px;
   min-width: 77px;
   padding-top: 1px;
   text-align: right;
+  white-space: normal !important;
+}
+
+.main-title .title-text .line-primary,
+.main-title .title-text .line-secondary {
+  width: max-content;
 }
 
 .main-title.club .title-text .line-primary {
   margin-top: 22px;
+  width: auto;
 }
 
 .main-title.club .title-text .line-secondary {
   min-height: 13px;
+  width: auto;
 }
 
 .main-navigation .main-nav ul li a {
