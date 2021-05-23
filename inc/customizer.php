@@ -13,7 +13,7 @@ function rotaract_family_controls($wp_customize) {
 		'description' => 'Passe das Logo an.'
 	) );
 	$wp_customize->add_setting('org_type', array(
-	  'type'    => 'theme_mod',
+		'type'    => 'theme_mod',
 		'default' => 'rac'
 	) );
 	$wp_customize->add_control(
@@ -24,14 +24,14 @@ function rotaract_family_controls($wp_customize) {
 			'settings'       => 'org_type',
 			'type'           => 'radio',
 			'choices'        => array(
-			  'rac'   => 'Rotaract',
-		    'iac'   => 'Interact',
-		    'rc'    => 'Rotary'
-      )
+				'rac'   => 'Rotaract',
+				'iac'   => 'Interact',
+				'rc'    => 'Rotary'
+			)
 		) )
 	);
 	$wp_customize->add_setting('logo_layout', array(
-	  'type'    => 'theme_mod',
+		'type'    => 'theme_mod',
 		'default' => 'club'
 	) );
 	$wp_customize->add_control(
@@ -42,13 +42,13 @@ function rotaract_family_controls($wp_customize) {
 			'settings'       => 'logo_layout',
 			'type'           => 'radio',
 			'choices'        => array(
-			  'club'   => 'Club',
-		    'partner'   => 'Partner'
-      )
+				'club'   => 'Club',
+				'partner'   => 'Partner'
+			)
 		) )
 	);
 	$wp_customize->add_setting('logo_text_line_1', array(
-	  'type'    => 'theme_mod',
+		'type'    => 'theme_mod',
 		'default' => get_bloginfo( 'title' )
 	) );
 	$wp_customize->add_control(
@@ -60,7 +60,7 @@ function rotaract_family_controls($wp_customize) {
 		) )
 	);
 	$wp_customize->add_setting('logo_text_line_2', array(
-	  'type'    => 'theme_mod',
+		'type'    => 'theme_mod',
 		'default' => ''
 	) );
 	$wp_customize->add_control(
@@ -68,7 +68,7 @@ function rotaract_family_controls($wp_customize) {
 			'label'             => 'Text Sekundär',
 			'section'           => 'logo',
 			'settings'          => 'logo_text_line_2',
-      'type'              => 'text'
+			'type'              => 'text'
 		) )
 	);
 
@@ -80,7 +80,7 @@ function rotaract_family_controls($wp_customize) {
 							<p><span class="customize-control-title">Datenschutz</span>Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Es empfiehlt sich aber, eine eigene Datenschutzseite anzulegen. Das kannst du <a href="/wp-admin/options-privacy.php" class="external-link" target="_blank">hier</a> tun. Eine Vorlage für deine Datenschutzerklärung findest du im Wiki von Rotaract Deutschland.</p>'
 	) );
 	$wp_customize->add_setting('copyright', array(
-	  'type'    => 'theme_mod',
+		'type'    => 'theme_mod',
 		'default' => get_bloginfo( 'name' )
 	) );
 	$wp_customize->add_control(
@@ -88,12 +88,12 @@ function rotaract_family_controls($wp_customize) {
 			'label'          => 'Copyright',
 			'section'        => 'footer-options',
 			'settings'       => 'copyright',
-      'type'           => 'text'
+			'type'           => 'text'
 		) )
 	);
 	$wp_customize->add_setting('contact_page', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'contact_page', array(
 			'label'          => 'Seite für das Kontaktformular',
@@ -105,8 +105,8 @@ function rotaract_family_controls($wp_customize) {
 		) )
 	);
 	$wp_customize->add_setting('impress_page', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'impress_page', array(
 			'label'          => 'Seite für das Impressum',
@@ -125,99 +125,99 @@ function rotaract_family_controls($wp_customize) {
 		'description'   => 'Füge die URL für jedes soziale Profil hinzu.'
 	) );
 	$wp_customize->add_setting('facebook', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'facebook', array(
 			'label'       => 'Facebook',
 			'section'     => 'social-media',
 			'settings'    => 'facebook',
-      'type'        => 'url'
+			'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('instagram', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'instagram', array(
 			'label'       => 'Instagram',
 			'section'     => 'social-media',
 			'settings'    => 'instagram',
-      'type'        => 'url'
+			'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('twitter', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'twitter', array(
 			'label'       => 'Twitter',
 			'section'     => 'social-media',
 			'settings'    => 'twitter',
-      'type'        => 'url'
+			'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('youtube', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'youtube', array(
 			'label'       => 'Youtube',
 			'section'     => 'social-media',
 			'settings'    => 'youtube',
-      'type'        => 'url'
+			'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('linkedin', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'linkedin', array(
 			'label'       => 'LinkedIn',
 			'section'     => 'social-media',
 			'settings'    => 'linkedin',
-      'type'        => 'url'
+			'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('xing', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'xing', array(
 			'label'       => 'Xing',
 			'section'     => 'social-media',
 			'settings'    => 'xing',
-      'type'        => 'url'
+			'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('github', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'github', array(
 			'label'       => 'Github',
 			'section'     => 'social-media',
 			'settings'    => 'github',
-      'type'        => 'url'
+			'type'        => 'url'
 		) )
 	);
 	$wp_customize->add_setting('email', array(
-	  'type'    => 'theme_mod'
-  ));
+		'type'    => 'theme_mod'
+	));
 	$wp_customize->add_control(
 		new WP_Customize_Control($wp_customize, 'email', array(
 			'label'       => 'E-Mail',
 			'section'     => 'social-media',
 			'settings'    => 'email',
-      'type'        => 'email'
+			'type'        => 'email'
 		) )
 	);
 
 	// SECTION Own Javascript
 	$wp_customize->add_section('own-javascript', array(
-    'title'         => 'Zusätzliches JS',
-    'priority'      => 201,
-    'description'   => 'Trage hier eigenen Javascript-Code ein. Dieser wird am Ende des &lt;body&gt;-Tag eingefügt. Vergiss nicht, &lt;script&gt;-Tags zu setzen. <strong>Benutzung auf eigene Gefahr! Pass bitte deine Datenschutzerklärung entsprechend an, falls du hier externe Scripte einbindest.</strong>'
+		'title'         => 'Zusätzliches JS',
+		'priority'      => 201,
+		'description'   => 'Trage hier eigenen Javascript-Code ein. Dieser wird am Ende des &lt;body&gt;-Tag eingefügt. Vergiss nicht, &lt;script&gt;-Tags zu setzen. <strong>Benutzung auf eigene Gefahr! Pass bitte deine Datenschutzerklärung entsprechend an, falls du hier externe Scripte einbindest.</strong>'
 	) );
 	$wp_customize->add_setting('custom_page_js', array(
 		'default' => ''
@@ -229,18 +229,30 @@ function rotaract_family_controls($wp_customize) {
 			'code_type'   => 'text/html'
 		) )
 	);
+	$wp_customize->add_setting('header_color', array(
+		'default'           => $GLOBALS[ 'family_colors' ][ get_theme_mod( 'org_type', 'rac' ) ],
+		'sanitize_callback' => 'generate_sanitize_hex_color'
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control($wp_customize, 'header_color', array(
+			'label'       => 'Kopfzeile',
+			'priority'    => 5,
+			'section'     => 'body_section',
+			'settings'    => 'header_color'
+		) )
+	);
 }
 
 function listSocialItems() {
 	return array(
-		'facebook'		=> get_theme_mod( 'facebook', '' ),
-		'instagram'		=> get_theme_mod( 'instagram', '' ),
-		'twitter'		  => get_theme_mod( 'twitter', '' ),
-		'youtube'		  => get_theme_mod( 'youtube', '' ),
-		'linkedin'		=> get_theme_mod( 'linkedin', '' ),
-		'xing'			  => get_theme_mod( 'xing', '' ),
-		'github'		  => get_theme_mod( 'github', '' ),
-		'email'			  => get_theme_mod( 'email', '' )
+		'facebook'  => get_theme_mod( 'facebook', '' ),
+		'instagram' => get_theme_mod( 'instagram', '' ),
+		'twitter'   => get_theme_mod( 'twitter', '' ),
+		'youtube'   => get_theme_mod( 'youtube', '' ),
+		'linkedin'  => get_theme_mod( 'linkedin', '' ),
+		'xing'      => get_theme_mod( 'xing', '' ),
+		'github'    => get_theme_mod( 'github', '' ),
+		'email'	    => get_theme_mod( 'email', '' )
 	);
 }
 
@@ -248,8 +260,8 @@ function listSocialItems() {
  * print custom javascript
  */
 if( ! empty( get_theme_mod( 'custom_page_js' ) ) ) {
-  add_action( 'wp_footer', 'custom_page_js', 999 );
-  function custom_page_js() {
-    echo get_theme_mod( 'custom_page_js' );
-  }
+	add_action( 'wp_footer', 'custom_page_js', 999 );
+	function custom_page_js() {
+		echo get_theme_mod( 'custom_page_js' );
+	}
 }
