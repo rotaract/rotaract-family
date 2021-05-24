@@ -10,7 +10,7 @@
 
 /*
  * Import Fonts
- * 
+ *
  * Get Font from local directory
  */
 
@@ -97,7 +97,7 @@
 /*
  * Child theme stylings
  */
- 
+
 html, body, .sidebar .widget, .footer-widgets .widget {
   font-size: 15px;
 }
