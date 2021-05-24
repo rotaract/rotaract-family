@@ -2,6 +2,11 @@
 
 /**
  * Construct the logo
+ *
+ * logo consists of:
+ *   - organisation's logotype / brand / lettering
+ *   - rotarian wheel in organisation's wheel color
+ *   - grey separator, separating logotype from (Club) name in logo layout 'club'
  */
 function generate_organization_logo() {
 	$brands = array(
