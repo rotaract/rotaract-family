@@ -85,7 +85,7 @@ function rotaract_family_controls( $wp_customize ) {
 		'title'       => 'Fußzeile',
 		'priority'    => 30,
 		'description' => '<p>Inhalte der Fußzeile anpassen</p>
-							<p><span class="customize-control-title">Datenschutz</span>Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Es empfiehlt sich aber, eine eigene Datenschutzseite anzulegen. Das kannst du <a href="/wp-admin/options-privacy.php" class="external-link" target="_blank">hier</a> tun. Eine Vorlage für deine Datenschutzerklärung findest du im Wiki von Rotaract Deutschland.</p>'
+		                  <p><span class="customize-control-title">Datenschutz</span>Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Es empfiehlt sich aber, eine eigene Datenschutzseite anzulegen. Das kannst du <a href="/wp-admin/options-privacy.php" class="external-link" target="_blank">hier</a> tun. Eine Vorlage für deine Datenschutzerklärung findest du im Wiki von Rotaract Deutschland.</p>'
 	) );
 	$wp_customize->add_setting( 'copyright', array(
 		'type'    => 'theme_mod',
