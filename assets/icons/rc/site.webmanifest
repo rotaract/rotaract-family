@@ -1,19 +1,19 @@
 {
-    "name": "Rotary Club",
-    "short_name": "Rotary",
-    "icons": [
-        {
-            "src": "/wp-content/themes/rotaract-family/assets/icons/rc/chromeicon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/wp-content/themes/rotaract-family/assets/icons/rc/chromeicon-256x256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#0050a2",
-    "background_color": "#f4f4f4",
-    "display": "standalone"
+	"name": "Rotary Club",
+	"short_name": "Rotary",
+	"icons": [
+		{
+			"src": "/wp-content/themes/rotaract-family/assets/icons/rc/chromeicon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/wp-content/themes/rotaract-family/assets/icons/rc/chromeicon-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#0050a2",
+	"background_color": "#f4f4f4",
+	"display": "standalone"
 }

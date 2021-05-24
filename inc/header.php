@@ -4,9 +4,11 @@ require $theme_dir . '/inc/logo.php';
 
 add_action( 'generate_before_header', 'generate_social_menu', 4 );
 function generate_social_menu() {
-	$items = array_filter( listSocialItems(), function($e) { return !empty($e); } );
+	$items = array_filter( listSocialItems(), function ( $e ) {
+		return ! empty( $e );
+	} );
 
-	if ( empty($items) ) {
+	if ( empty( $items ) ) {
 		return;
 	}
 	?>
@@ -14,11 +16,11 @@ function generate_social_menu() {
 		<div <?php generate_do_element_classes( 'inside_header' ); ?>>
 			<div class="social-media-menu">
 				<?php
-				foreach ($items as $type => $link) {
+				foreach ( $items as $type => $link ) {
 					echo sprintf(
 						'<a href="%2$s" title="%1$s" target="_blank" class="social-media-link"><img src="%3$s" /></a>',
-						ucfirst($type),
-						'email' === $type ? 'mailto:' . antispambot(is_email( $link )) : $link,
+						ucfirst( $type ),
+						'email' === $type ? 'mailto:' . antispambot( is_email( $link ) ) : $link,
 						get_stylesheet_directory_uri() . '/assets/img/socialmedia/' . $type . '.svg'
 					);
 				}
@@ -33,10 +35,10 @@ function generate_social_menu() {
  * Override site title construction for building Rotaract/Rotary/Interact logos
  */
 function generate_construct_site_title() {
-	$text_colors = array(
-		'rac'   => '#d91b5c',   // cranberry
-		'iac'   => '#019fcb',   // skyblue
-		'rc'    => '#17458f'    // royal blue
+	$text_colors       = array(
+		'rac' => '#d91b5c',   // cranberry
+		'iac' => '#019fcb',   // skyblue
+		'rc'  => '#17458f'    // royal blue
 	);
 	$generate_settings = wp_parse_args(
 		get_option( 'generate_settings', array() ),
@@ -44,9 +46,9 @@ function generate_construct_site_title() {
 	);
 
 	// Get the title and tagline.
-	$title = get_bloginfo( 'title' );
-	$tagline = get_bloginfo( 'description' );
-	$logo_text_lines_count = !empty( get_theme_mod( 'logo_text_line_2' ) ) ? 2 : 1;
+	$title                 = get_bloginfo( 'title' );
+	$tagline               = get_bloginfo( 'description' );
+	$logo_text_lines_count = ! empty( get_theme_mod( 'logo_text_line_2' ) ) ? 2 : 1;
 
 	// If the disable title checkbox is checked, or the title field is empty, return true.
 	$disable_title = ( '1' == $generate_settings['hide_title'] || '' == $title ) ? true : false; // phpcs:ignore
@@ -123,7 +125,7 @@ function generate_construct_header_widget() {
 /**
  * Create website icons by default if no icon is set in customizer.
  */
-if( !get_option( 'site_icon', false ) ) {
+if ( ! get_option( 'site_icon', false ) ) {
 	add_action( 'wp_head', 'generate_add_icons' );
 
 	function generate_add_icons() {
@@ -136,7 +138,7 @@ if( !get_option( 'site_icon', false ) ) {
 			<meta name="msapplication-config" content="%1$s/assets/icons/%2$s/browserconfig.xml">',
 			get_stylesheet_directory_uri(),
 			get_theme_mod( 'org_type', 'rac' ),
-			$GLOBALS[ 'wheel_colors' ][ get_theme_mod( 'org_type', 'rac' ) ]
+			$GLOBALS['wheel_colors'][ get_theme_mod( 'org_type', 'rac' ) ]
 		);
 	}
 }
@@ -150,6 +152,6 @@ function generate_add_theme_color() {
 	printf(
 		'<meta name="theme-color" content="%1$s">
 		<meta name="msapplication-TileColor" content="%1$s">',
-		get_theme_mod( 'header_color', $GLOBALS[ 'family_colors' ][ get_theme_mod( 'org_type', 'rac' ) ] )
+		get_theme_mod( 'header_color', $GLOBALS['family_colors'][ get_theme_mod( 'org_type', 'rac' ) ] )
 	);
 }

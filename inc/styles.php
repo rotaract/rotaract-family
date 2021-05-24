@@ -9,8 +9,8 @@ function generate_child_dynamic_css() {
 	$css = new GeneratePress_CSS();
 
 	$css->set_selector( 'a' )->add_property( 'color', $settings['link_color'] );
-	$css->set_selector( '#social-media-head.site-header' )->add_property( 'background-color', get_theme_mod( 'header_color', $GLOBALS[ 'family_colors' ][ get_theme_mod( 'org_type', 'rac' ) ] ) );
-	$css->set_selector( '#masthead.site-header' )->add_property( 'border-top', 'solid 2px ' . get_theme_mod( 'header_color', $GLOBALS[ 'family_colors' ][ get_theme_mod( 'org_type', 'rac' ) ] ) );
+	$css->set_selector( '#social-media-head.site-header' )->add_property( 'background-color', get_theme_mod( 'header_color', $GLOBALS['family_colors'][ get_theme_mod( 'org_type', 'rac' ) ] ) );
+	$css->set_selector( '#masthead.site-header' )->add_property( 'border-top', 'solid 2px ' . get_theme_mod( 'header_color', $GLOBALS['family_colors'][ get_theme_mod( 'org_type', 'rac' ) ] ) );
 	$css->set_selector( '.main-title:hover' )->add_property( 'color', $settings['link_color'] );
 	$css->set_selector( '.main-navigation .main-nav ul ul li:hover>a, .main-navigation .main-nav ul ul li:focus>a, .main-navigation .main-nav ul ul li.sfHover>a' )->add_property( 'color', $settings['link_color'] );
 	$css->set_selector( 'button, html input[type=button], input[type=reset], input[type=submit], a.button, a.wp-block-button__link:not(.has-background)' )->add_property( 'background-color', $settings['link_color'] );
@@ -27,8 +27,8 @@ function generate_child_dynamic_css() {
 
 add_action( 'wp_enqueue_scripts', 'generate_enqueue_child_dynamic_css', 51 );
 /**
-* Enqueue our dynamic CSS.
-*/
+ * Enqueue our dynamic CSS.
+ */
 function generate_enqueue_child_dynamic_css() {
 	$css = generate_child_dynamic_css();
 
