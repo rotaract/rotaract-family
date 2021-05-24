@@ -1,7 +1,7 @@
 <?php
 
 /**
- * set logo for backend login
+ * Set logo for backend login
  */
 function custom_login_logo() {
 	echo sprintf(
@@ -19,7 +19,7 @@ function custom_login_logo() {
 add_action( 'login_head', 'custom_login_logo' );
 
 /**
- * remove IP address on comments
+ * Remove IP address on comments
  */
 function wpb_remove_commentsip( $comment_author_ip ) {
 	return '';
