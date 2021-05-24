@@ -137,10 +137,14 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'facebook', array(
-			'label'    => 'Facebook',
-			'section'  => 'social-media',
-			'settings' => 'facebook',
-			'type'     => 'url'
+			'label'       => 'Facebook',
+			'section'     => 'social-media',
+			'settings'    => 'facebook',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://www.facebook.com/MyRotaractClub',
+				'pattern'     => 'https:\/\/(www\.)?facebook\.com\/.*',
+			)
 		) )
 	);
 	$wp_customize->add_setting( 'instagram', array(
@@ -148,10 +152,14 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'instagram', array(
-			'label'    => 'Instagram',
-			'section'  => 'social-media',
-			'settings' => 'instagram',
-			'type'     => 'url'
+			'label'       => 'Instagram',
+			'section'     => 'social-media',
+			'settings'    => 'instagram',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://www.instagram.com/my-rotaract-club',
+				'pattern'     => 'https:\/\/(www\.)?instagram\.com\/.*',
+			)
 		) )
 	);
 	$wp_customize->add_setting( 'twitter', array(
@@ -159,10 +167,14 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'twitter', array(
-			'label'    => 'Twitter',
-			'section'  => 'social-media',
-			'settings' => 'twitter',
-			'type'     => 'url'
+			'label'       => 'Twitter',
+			'section'     => 'social-media',
+			'settings'    => 'twitter',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://twitter.com/my-rotaract-club',
+				'pattern'     => 'https:\/\/(www\.)?twitter\.com\/.*',
+			)
 		) )
 	);
 	$wp_customize->add_setting( 'youtube', array(
@@ -170,10 +182,14 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'youtube', array(
-			'label'    => 'Youtube',
-			'section'  => 'social-media',
-			'settings' => 'youtube',
-			'type'     => 'url'
+			'label'       => 'Youtube',
+			'section'     => 'social-media',
+			'settings'    => 'youtube',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://www.youtube.com/c/my-rotaract-club',
+				'pattern'     => 'https:\/\/(www\.)?youtube\.com\/.*',
+			)
 		) )
 	);
 	$wp_customize->add_setting( 'linkedin', array(
@@ -181,10 +197,14 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'linkedin', array(
-			'label'    => 'LinkedIn',
-			'section'  => 'social-media',
-			'settings' => 'linkedin',
-			'type'     => 'url'
+			'label'       => 'LinkedIn',
+			'section'     => 'social-media',
+			'settings'    => 'linkedin',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://www.linkedin.com/company/my-rotaract-club',
+				'pattern'     => 'https:\/\/(www\.)?linkedin\.com\/.*',
+			)
 		) )
 	);
 	$wp_customize->add_setting( 'xing', array(
@@ -192,10 +212,14 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'xing', array(
-			'label'    => 'Xing',
-			'section'  => 'social-media',
-			'settings' => 'xing',
-			'type'     => 'url'
+			'label'       => 'Xing',
+			'section'     => 'social-media',
+			'settings'    => 'xing',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://www.xing.com/communities/groups/my-rotaract-club'
+				'pattern'     => 'https:\/\/(www\.)?xing\.com\/.*',
+			)
 		) )
 	);
 	$wp_customize->add_setting( 'github', array(
@@ -203,10 +227,14 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'github', array(
-			'label'    => 'Github',
-			'section'  => 'social-media',
-			'settings' => 'github',
-			'type'     => 'url'
+			'label'       => 'Github',
+			'section'     => 'social-media',
+			'settings'    => 'github',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://github.com/rotaract',
+				'pattern'     => 'https:\/\/(www\.)?github\.com\/.*',
+			)
 		) )
 	);
 	$wp_customize->add_setting( 'email', array(
