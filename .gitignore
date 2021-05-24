@@ -1,1 +1,6 @@
+### IDE ###
+## PhpStorm / IntelliJ IDEA ##
 .idea/
+## VS Code ##
+.vscode/*
+!.vscode/extensions.json
