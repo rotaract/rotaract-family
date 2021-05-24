@@ -128,7 +128,9 @@ if( !get_option( 'site_icon', false ) ) {
 
     function generate_add_icons() {
         printf(
-            '<link rel="icon" type="image/svg+xml" href="%1$s/assets/icons/%2$s_favicon.svg"><link rel="alternate icon" href="%1$s/assets/icons/%2$s_favicon.ico">',
+            '<link rel="icon" type="image/svg+xml" href="%1$s/assets/icons/%2$s_favicon.svg">
+            <link rel="alternate icon" href="%1$s/assets/icons/%2$s_favicon.ico">
+            <link rel="apple-touch-icon" sizes="180x180" href="%1$s/assets/icons/%2$s_touchicon.png">',
             get_stylesheet_directory_uri(),
             get_theme_mod( 'org_type', 'rac' )
         );
