@@ -2,6 +2,8 @@
 
 A lightweight Wordpress theme for the world of Rotaract
 
+![Screenshot of theme 'Rotaract Family'](preview.webp)
+
 ## Installation
 
 This theme is already available for German Rotaract clubs, districts and projects. Beyond that it is easy to setup on any Wordpress project.
