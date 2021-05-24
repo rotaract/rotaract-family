@@ -182,7 +182,7 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'youtube', array(
-			'label'       => 'Youtube',
+			'label'       => 'YouTube',
 			'section'     => 'social-media',
 			'settings'    => 'youtube',
 			'type'        => 'url',
