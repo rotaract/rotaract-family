@@ -5,6 +5,11 @@ $family_colors = array(
   'iac'   => '#019fcb',   // skyblue
   'rc'    => '#0050a2'    // azure
 );
+$wheel_colors = array(
+    'rac'   => '#d91b5c',   // cranberry
+    'iac'   => '#019fcb',   // skyblue
+    'rc'    => '#f7a81b'    // gold
+);
 
 add_filter( 'generate_option_defaults', 'child_new_defaults' );
 /**
