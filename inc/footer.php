@@ -3,8 +3,6 @@
 add_action( 'generate_credits', 'generate_add_footer_info' );
 /**
  * Add the copyright to the footer
- *
- * @since 0.1
  */
 function generate_add_footer_info() {
 	$copyright = sprintf(
