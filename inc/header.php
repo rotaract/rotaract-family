@@ -124,21 +124,21 @@ function generate_construct_header_widget() {
  * Create website icons by default if no icon is set in customizer.
  */
 if( !get_option( 'site_icon', false ) ) {
-    add_action( 'wp_head', 'generate_add_icons' );
+	add_action( 'wp_head', 'generate_add_icons' );
 
-    function generate_add_icons() {
-        printf(
-            '<link rel="icon" href="%1$s/assets/icons/%2$s/favicon.svg">
-            <link rel="alternate icon" href="%1$s/assets/icons/%2$s/favicon.ico">
-            <link rel="apple-touch-icon" href="%1$s/assets/icons/%2$s/apple-touch-icon.png">
-            <link rel="manifest" href="%1$s/assets/icons/%2$s/site.webmanifest">
-            <link rel="mask-icon" href="%1$s/assets/icons/safari-pinned-tab.svg" color="%3$s">
-            <meta name="msapplication-config" content="%1$s/assets/icons/%2$s/browserconfig.xml">',
-            get_stylesheet_directory_uri(),
-            get_theme_mod( 'org_type', 'rac' ),
-            $GLOBALS[ 'wheel_colors' ][ get_theme_mod( 'org_type', 'rac' ) ]
-        );
-    }
+	function generate_add_icons() {
+		printf(
+			'<link rel="icon" href="%1$s/assets/icons/%2$s/favicon.svg">
+			<link rel="alternate icon" href="%1$s/assets/icons/%2$s/favicon.ico">
+			<link rel="apple-touch-icon" href="%1$s/assets/icons/%2$s/apple-touch-icon.png">
+			<link rel="manifest" href="%1$s/assets/icons/%2$s/site.webmanifest">
+			<link rel="mask-icon" href="%1$s/assets/icons/safari-pinned-tab.svg" color="%3$s">
+			<meta name="msapplication-config" content="%1$s/assets/icons/%2$s/browserconfig.xml">',
+			get_stylesheet_directory_uri(),
+			get_theme_mod( 'org_type', 'rac' ),
+			$GLOBALS[ 'wheel_colors' ][ get_theme_mod( 'org_type', 'rac' ) ]
+		);
+	}
 }
 
 /**
@@ -147,9 +147,9 @@ if( !get_option( 'site_icon', false ) ) {
 add_action( 'wp_head', 'generate_add_theme_color' );
 
 function generate_add_theme_color() {
-    printf(
-        '<meta name="theme-color" content="%1$s">
-        <meta name="msapplication-TileColor" content="%1$s">',
-        get_theme_mod( 'header_color', $GLOBALS[ 'family_colors' ][ get_theme_mod( 'org_type', 'rac' ) ] )
-    );
+	printf(
+		'<meta name="theme-color" content="%1$s">
+		<meta name="msapplication-TileColor" content="%1$s">',
+		get_theme_mod( 'header_color', $GLOBALS[ 'family_colors' ][ get_theme_mod( 'org_type', 'rac' ) ] )
+	);
 }
