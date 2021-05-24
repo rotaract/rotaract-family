@@ -119,3 +119,18 @@ function generate_construct_site_title() {
 function generate_construct_header_widget() {
 	return;
 }
+
+/**
+ * Create website icons by default if no icon is set in customizer
+ */
+if( !get_option( 'site_icon', false ) ) {
+    add_action( 'wp_head', 'generate_add_icons' );
+
+    function generate_add_icons() {
+        printf(
+            '<link rel="icon" type="image/svg+xml" href="%1$s/assets/icons/%2$s_favicon.svg"><link rel="alternate icon" href="%1$s/assets/icons/%2$s_favicon.ico">',
+            get_stylesheet_directory_uri(),
+            get_theme_mod( 'org_type', 'rac' )
+        );
+    }
+}
