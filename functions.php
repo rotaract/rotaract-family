@@ -10,10 +10,10 @@
  * Disable attention-seeking advertising banner for the premium version of GeneratePress.
  * GeneratePress is the parent theme of this theme.
  */
-define('GP_PREMIUM_VERSION', false);
+define( 'GP_PREMIUM_VERSION', false );
 
 function generate_fonts_customize_register() {
-  return;
+	return;
 }
 
 /**
