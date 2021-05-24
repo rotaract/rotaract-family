@@ -10,7 +10,7 @@ function generate_add_footer_info() {
 	$copyright = sprintf(
 		'<div class="copyright">&copy; %1$s %2$s</div>',
 		date( 'Y' ), // phpcs:ignore
-		get_theme_mod( 'copyright', get_bloginfo( 'title' ) )
+		trim( get_theme_mod( 'copyright' ) ) ?: get_bloginfo( 'title' )
 	);
 	$contact = get_theme_mod( 'contact_page' ) ? sprintf(
 		'<a href="%1$s" title="Kontakt">Kontakt</a> | ',
