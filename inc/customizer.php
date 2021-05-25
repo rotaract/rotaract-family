@@ -217,8 +217,8 @@ function rotaract_family_controls( $wp_customize ) {
 			'settings'    => 'xing',
 			'type'        => 'url',
 			'input_attrs' => array(
-				'placeholder' => 'https://www.xing.com/communities/groups/my-rotaract-club'
-				'pattern'     => 'https:\/\/(www\.)?xing\.com\/.*',
+				'placeholder' => 'https://www.xing.com/communities/groups/my-rotaract-club',
+				'pattern'     => 'https:\/\/(www\.)?xing\.com\/.*'
 			)
 		) )
 	);
