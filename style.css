@@ -140,7 +140,7 @@ body.separate-containers .site-header.grid-container {
 }
 
 .main-title.club {
-	display: block;
+	display: inline-block;
 	margin-top: -6px;
 	padding-right: 55px;
 }
