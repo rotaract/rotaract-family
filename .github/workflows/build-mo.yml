@@ -1,0 +1,26 @@
+name: Generate MO files for I18n
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install WP-CLI
+        run: curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+      - name: Build MO files
+        run: php wp-cli.phar i18n make-mo languages
+      - name: Clean up
+        run: rm wp-cli.phar
+      - name: Upload theme
+        uses: actions/upload-artifact@v2
+        with:
+          name: rotaract-family
+          path: |
+            ./*
+            !.*
