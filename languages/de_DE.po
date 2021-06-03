@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Rotaract Family\n"
+"POT-Creation-Date: 2021-06-03 11:32+0200\n"
+"PO-Revision-Date: 2021-06-03 11:32+0200\n"
+"Last-Translator: Benno Bielmeier <benno.bielmeier@rotaract.de>\n"
+"Language-Team: https://github.com/rotaract\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/customizer.php:11
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:13
+msgid "Customize the logo."
+msgstr "Passe das Logo an."
+
+#: inc/customizer.php:21
+msgid "Organization"
+msgstr "Organisation"
+
+#: inc/customizer.php:22
+msgid ""
+"This also sets the site's primary color. To take this into effect the site "
+"has to be <a href=\"javascript:location.reload();\">reloaded</a> after "
+"publishment."
+msgstr ""
+"Diese Einstellung setzt auch die Standard-Farbe der Seite. Dafür muss die "
+"Seite nach dem Veröffentlichen <a href=\"javascript:location.reload();\">neu "
+"geladen werden</a>."
+
+#: inc/customizer.php:39
+msgid "Logo Layout"
+msgstr "Logo-Layout"
+
+#: inc/customizer.php:40
+msgid "Set the logo layout."
+msgstr "Lege das Layout des Logos fest."
+
+#: inc/customizer.php:56
+msgid "Primary Text"
+msgstr "Text Primär"
+
+#: inc/customizer.php:72
+msgid "Secondary Text"
+msgstr "Text Sekundär"
+
+#: inc/customizer.php:85 inc/customizer.php:286
+msgid "Footer"
+msgstr "Fußzeile"
+
+#: inc/customizer.php:87
+msgid "Change the footer's content."
+msgstr "Inhalte der Fußzeile anpassen."
+
+#: inc/customizer.php:88 inc/footer.php:18
+msgid "Privacy Policy"
+msgstr "Datenschutz"
+
+#: inc/customizer.php:88
+msgid ""
+"Initially the privacy policy of Rotaract Germany is linked. Albeit, it is "
+"highly recommended creating your own privacy policy site. Visit <a href=\"/"
+"wp-admin/options-privacy.php\" class=\"external-link\" target=\"_blank"
+"\">this site</a> to do so."
+msgstr ""
+"Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. "
+"Es empfiehlt sich aber, eine eigene Datenschutz-Seite anzulegen. Das kannst "
+"du <a href=\"/wp-admin/options-privacy.php\" class=\"external-link\" target="
+"\"_blank\">hier</a> tun. Eine Vorlage für deine Datenschutzerklärung findest "
+"du im Wiki von Rotaract Deutschland."
+
+#: inc/customizer.php:107
+msgid "Contact Page"
+msgstr "Seite für das Kontaktformular"
+
+#: inc/customizer.php:108
+msgid "Which page contains the contact form."
+msgstr "Gib hier an, auf welcher Seite dein Kontaktformular zu finden ist."
+
+#: inc/customizer.php:120
+msgid "Imprint Page"
+msgstr "Seite für das Impressum"
+
+#: inc/customizer.php:121
+#, php-format
+msgid "Which page contains the imprint. Default: \"%s\""
+msgstr ""
+"Gib hier an, auf welcher Seite dein Impressum zu finden ist. Standard: \"%s"
+"\". Eine Vorlage für ein Impressum findest du im Wiki."
+
+#: inc/customizer.php:121 inc/footer.php:20
+msgid "/imprint"
+msgstr "/impressum"
+
+#: inc/customizer.php:133
+msgid "Link your Social Media accounts."
+msgstr "Füge die URL für jedes soziale Profil hinzu."
+
+#: inc/customizer.php:254
+msgid "Additional JavaScript"
+msgstr "Zusätzliches JavaScript"
+
+#: inc/customizer.php:256
+msgid ""
+"Add your custom JavaScript code. It will be inserted at the end of the "
+"HTML's &lt;body&gt;. The &lt;script&gt; tags has to be included here. "
+"<strong>CAUTION: Use at your own risk! Please adjust your privacy policy "
+"accordingly if you include external scripts here.</strong>"
+msgstr ""
+"Trage hier eigenen Javascript-Code ein. Dieser wird am Ende des &lt;body&gt;-"
+"Tag eingefügt. Vergiss nicht, &lt;script&gt;-Tags zu setzen. "
+"<strong>Benutzung auf eigene Gefahr! Pass bitte deine Datenschutzerklärung "
+"entsprechend an, falls du hier externe Scripte einbindest.</strong>"
+
+#: inc/customizer.php:274
+msgid "Header"
+msgstr "Kopfzeile"
+
+#: inc/footer.php:14
+msgid "Contact"
+msgstr "Kontakt"
+
+#: inc/footer.php:18
+msgid "Imprint"
+msgstr "Impressum"

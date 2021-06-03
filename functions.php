@@ -21,6 +21,14 @@ function generate_fonts_customize_register() {
  */
 $theme_dir = get_stylesheet_directory();
 
+/**
+ * Load the text domain
+ */
+add_action( 'after_setup_theme', 'rotaract_family_theme_setup' );
+function rotaract_family_theme_setup() {
+	load_theme_textdomain('rotaract-family', get_template_directory() . '/languages' );
+}
+
 require $theme_dir . '/inc/defaults.php';
 require $theme_dir . '/inc/customizer.php';
 require $theme_dir . '/inc/styles.php';

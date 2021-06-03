@@ -8,9 +8,9 @@ function rotaract_family_controls( $wp_customize ) {
 
 	// SECTION Rotaract Family
 	$wp_customize->add_section( 'logo', array(
-		'title'       => 'Logo',
+		'title'       => __('Logo', 'rotaract-family'),
 		'priority'    => 21,
-		'description' => 'Passe das Logo an.'
+		'description' => __('Customize the logo.', 'rotaract-family')
 	) );
 	$wp_customize->add_setting( 'org_type', array(
 		'type'    => 'theme_mod',
@@ -18,8 +18,8 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'org_type', array(
-			'label'       => 'Organisation',
-			'description' => 'Diese Einstellung setzt auch die Default-Farbe der Seite. Dafür muss die Seite nach dem Veröffentlichen <a href="javascript:location.reload();">neu geladen werden</a>.',
+			'label'       => __('Organization', 'rotaract-family'),
+			'description' => __('This also sets the site\'s primary color. To take this into effect the site has to be <a href="javascript:location.reload();">reloaded</a> after publishment.', 'rotaract-family'),
 			'section'     => 'logo',
 			'settings'    => 'org_type',
 			'type'        => 'radio',
@@ -36,8 +36,8 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'logo_layout', array(
-			'label'       => 'Logo-Layout',
-			'description' => 'Lege das Layout des Logos fest.',
+			'label'       => __('Logo Layout', 'rotaract-family'),
+			'description' => __('Set the logo layout.', 'rotaract-family'),
 			'section'     => 'logo',
 			'settings'    => 'logo_layout',
 			'type'        => 'radio',
@@ -53,7 +53,7 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'logo_text_line_1', array(
-			'label'       => 'Text Primär',
+			'label'       => __('Primary Text', 'rotaract-family'),
 			'section'     => 'logo',
 			'settings'    => 'logo_text_line_1',
 			'type'        => 'text',
@@ -69,7 +69,7 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'logo_text_line_2', array(
-			'label'       => 'Text Sekundär',
+			'label'       => __('Secondary Text', 'rotaract-family'),
 			'section'     => 'logo',
 			'settings'    => 'logo_text_line_2',
 			'type'        => 'text',
@@ -82,10 +82,10 @@ function rotaract_family_controls( $wp_customize ) {
 
 	// SECTION Footer Options
 	$wp_customize->add_section( 'footer-options', array(
-		'title'       => 'Fußzeile',
+		'title'       => __('Footer', 'rotaract-family'),
 		'priority'    => 30,
-		'description' => '<p>Inhalte der Fußzeile anpassen</p>
-		                  <p><span class="customize-control-title">Datenschutz</span>Standardmäßig verlinkt mit der Datenschutz-Seite von Rotaract Deutschland. Es empfiehlt sich aber, eine eigene Datenschutzseite anzulegen. Das kannst du <a href="/wp-admin/options-privacy.php" class="external-link" target="_blank">hier</a> tun. Eine Vorlage für deine Datenschutzerklärung findest du im Wiki von Rotaract Deutschland.</p>'
+		'description' => '<p>' . __('Change the footer\'s content.', 'rotaract-family') . '</p>
+		                  <p><span class="customize-control-title">' . __('Privacy Policy', 'rotaract-family') . '</span>' . __('Initially the privacy policy of Rotaract Germany is linked. Albeit, it is highly recommended creating your own privacy policy site. Visit <a href="/wp-admin/options-privacy.php" class="external-link" target="_blank">this site</a> to do so.', 'rotaract-family') . '</p>'
 	) );
 	$wp_customize->add_setting( 'copyright', array(
 		'type'    => 'theme_mod',
@@ -104,8 +104,8 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'contact_page', array(
-			'label'          => 'Seite für das Kontaktformular',
-			'description'    => 'Gib hier an, auf welcher Seite dein Kontaktformular zu finden ist.',
+			'label'          => __('Contact Page', 'rotaract-family'),
+			'description'    => __('Which page contains the contact form.', 'rotaract-family'),
 			'section'        => 'footer-options',
 			'settings'       => 'contact_page',
 			'type'           => 'dropdown-pages',
@@ -117,8 +117,8 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'impress_page', array(
-			'label'          => 'Seite für das Impressum',
-			'description'    => 'Gib hier an, auf welcher Seite dein Impressum zu finden ist. Standard: "/impressum". Eine Vorlage für ein Impressum findest du im Wiki.',
+			'label'          => __('Imprint Page', 'rotaract-family'),
+			'description'    => sprintf( __('Which page contains the imprint. Default: "%s"', 'rotaract-family') . __('/imprint', 'rotaract-family') ),
 			'section'        => 'footer-options',
 			'settings'       => 'impress_page',
 			'type'           => 'dropdown-pages',
@@ -128,9 +128,9 @@ function rotaract_family_controls( $wp_customize ) {
 
 	// SECTION Social Media
 	$wp_customize->add_section( 'social-media', array(
-		'title'       => 'Social Media Links',
+		'title'       => 'Social Media',
 		'priority'    => 25,
-		'description' => 'Füge die URL für jedes soziale Profil hinzu.'
+		'description' => __('Link your Social Media accounts.', 'rotaract-family')
 	) );
 	$wp_customize->add_setting( 'facebook', array(
 		'type' => 'theme_mod'
@@ -251,9 +251,9 @@ function rotaract_family_controls( $wp_customize ) {
 
 	// SECTION Own Javascript
 	$wp_customize->add_section( 'own-javascript', array(
-		'title'       => 'Zusätzliches JS',
+		'title'       => __('Additional JavaScript', 'rotaract-family'),
 		'priority'    => 201,
-		'description' => 'Trage hier eigenen Javascript-Code ein. Dieser wird am Ende des &lt;body&gt;-Tag eingefügt. Vergiss nicht, &lt;script&gt;-Tags zu setzen. <strong>Benutzung auf eigene Gefahr! Pass bitte deine Datenschutzerklärung entsprechend an, falls du hier externe Scripte einbindest.</strong>'
+		'description' => __('Add your custom JavaScript code. It will be inserted at the end of the HTML\'s &lt;body&gt;. The &lt;script&gt; tags has to be included here. <strong>CAUTION: Use at your own risk! Please adjust your privacy policy accordingly if you include external scripts here.</strong>', 'rotaract-family')
 	) );
 	$wp_customize->add_setting( 'custom_page_js', array(
 		'default' => ''
@@ -271,7 +271,7 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control( $wp_customize, 'header_color', array(
-			'label'    => 'Kopfzeile',
+			'label'    => __('Header', 'rotaract-family'),
 			'priority' => 5,
 			'section'  => 'body_section',
 			'settings' => 'header_color'
@@ -283,7 +283,7 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control( $wp_customize, 'footer_color', array(
-			'label'    => 'Fußzeile',
+			'label'    => __('Footer', 'rotaract-family'),
 			'priority' => 6,
 			'section'  => 'body_section',
 			'settings' => 'footer_color'
