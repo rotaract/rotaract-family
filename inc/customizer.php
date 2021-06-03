@@ -305,7 +305,7 @@ function listSocialItems() {
 }
 
 /**
- * print custom javascript
+ * Print custom javascript
  */
 if ( ! empty( get_theme_mod( 'custom_page_js' ) ) ) {
 	add_action( 'wp_footer', 'custom_page_js', 999 );
