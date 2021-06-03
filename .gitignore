@@ -4,3 +4,7 @@
 ## VS Code ##
 .vscode/*
 !.vscode/extensions.json
+
+### WordPress ###
+## I18n
+/languages/*.mo
