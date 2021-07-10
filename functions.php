@@ -13,7 +13,6 @@
 define( 'GP_PREMIUM_VERSION', false );
 
 function generate_fonts_customize_register() {
-	return;
 }
 
 /**
