@@ -23,10 +23,10 @@ $theme_dir = get_stylesheet_directory();
 /**
  * Load the text domain.
  */
-add_action( 'after_setup_theme', 'rotaract_family_theme_setup' );
 function rotaract_family_theme_setup() {
 	load_theme_textdomain( 'rotaract-family', get_stylesheet_directory() . '/languages' );
 }
+add_action( 'after_setup_theme', 'rotaract_family_theme_setup' );
 
 require $theme_dir . '/inc/defaults.php';
 require $theme_dir . '/inc/customizer.php';
