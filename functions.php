@@ -16,12 +16,12 @@ function generate_fonts_customize_register() {
 }
 
 /**
- * Get all necessary theme files
+ * Get all necessary theme files.
  */
 $theme_dir = get_stylesheet_directory();
 
 /**
- * Load the text domain
+ * Load the text domain.
  */
 add_action( 'after_setup_theme', 'rotaract_family_theme_setup' );
 function rotaract_family_theme_setup() {
