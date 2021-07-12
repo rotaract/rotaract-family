@@ -4,6 +4,25 @@ A lightweight WordPress theme for the world of Rotaract
 
 ![Screenshot of theme 'Rotaract Family'](preview.webp)
 
+## Features
+
+1. **Performance**  
+   The design itself is optimized for performance and compression. This makes your pages load even faster.
+2. **Customization**  
+   Change layouts, colors and menus with just few clicks.
+3. **Responsiveness**  
+   No matter what device, your website automatically adapts
+4. **Logo Editor**  
+   Design your club logo the easy way. For Rotaract, Interact and Rotary!
+5. **Data Protection**  
+   Important requirements of the DSG-VO are fulfilled.
+6. **Compatibility**  
+   Compatible with all plugins available in Rotaract Hosting. And many more in the future!
+7. **Multilingualism**  
+   Translations available for English and German.
+   
+*Are you missing any features or languages? Feel free telling us and [open a new issue](https://github.com/rotaract/rotaract-family/issues/new) describing your ideas.*
+
 ## Installation
 
 This theme is already available for German Rotaract clubs, districts and projects. Beyond that it is easy to setup on any WordPress project.
