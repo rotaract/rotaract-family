@@ -11,5 +11,6 @@
 	<exclude-pattern>images/</exclude-pattern>
 
 	<rule ref="WordPress">
+		<exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
 	</rule>
 </ruleset>
