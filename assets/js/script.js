@@ -1,4 +1,10 @@
 /**
+ * General global JS
+ *
+ * @package rotaract-family
+ */
+
+/**
  * Add event handler for corfimation of external links
  */
 document.querySelectorAll( 'a' ).forEach(
