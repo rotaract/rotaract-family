@@ -1,0 +1,35 @@
+{
+	"name": "rotaract/rotaract-family",
+	"description": "",
+	"type": "project",
+	"keywords": [
+		"wordpress",
+		"theme",
+		"rotaract",
+		"interact",
+		"rotary"
+	],
+	"homepage": "https://github.com/rotaract/rotaract-family",
+	"readme": "README.md",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Rotaract Germany"
+		}
+	],
+	"support": {
+		"email": "support@rotaract.de",
+		"issues": "https://github.com/rotaract/rotaract-family/issues"
+	},
+	"require": {
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.3",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1"
+	},
+	"minimum-stability": "stable",
+	"scripts": {
+		"lint": "phpcs --standard=phpcs.xml",
+		"translate": "wp-cli i18n make-mo languages"
+	}
+}
