@@ -6,9 +6,14 @@
 
 	<config name="text_domain" value="rotaract-family" />
 
-	<exclude-pattern>vendor/</exclude-pattern>
+	<!-- Exclude the Composer Vendor directory. -->
+	<exclude-pattern>/vendor/</exclude-pattern>
+
+	<!-- Exclude the Node Modules directory. -->
 	<exclude-pattern>node_modules/</exclude-pattern>
-	<exclude-pattern>images/</exclude-pattern>
+
+	<!-- Exclude minified Javascript files. -->
+	<exclude-pattern>*.min.js</exclude-pattern>
 
 	<rule ref="WordPress">
 		<exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
