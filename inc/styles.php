@@ -1,5 +1,15 @@
 <?php
+/**
+ * Functions concerning style (CSS) of this child theme.
+ *
+ * @package rotaract-family
+ */
 
+/**
+ *
+ *
+ * @return
+ */
 function generate_child_dynamic_css() {
 	$settings = wp_parse_args(
 		get_option( 'generate_settings', array() ),
@@ -25,7 +35,6 @@ function generate_child_dynamic_css() {
 	return apply_filters( 'generate_base_css_output', $css->css_output() );
 }
 
-add_action( 'wp_enqueue_scripts', 'generate_enqueue_child_dynamic_css', 51 );
 /**
  * Enqueue our dynamic CSS.
  */
@@ -36,3 +45,4 @@ function generate_enqueue_child_dynamic_css() {
 	wp_enqueue_style( 'child-generated-style' );
 	wp_add_inline_style( 'child-generated-style', wp_strip_all_tags( $css ) );
 }
+add_action( 'wp_enqueue_scripts', 'generate_enqueue_child_dynamic_css', 51 );
