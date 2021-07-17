@@ -5,6 +5,10 @@
 .vscode/*
 !.vscode/extensions.json
 
+### Dependencies ###
+## Composer ##
+/vendor/
+
 ### WordPress ###
 ## I18n
 /languages/*.mo
