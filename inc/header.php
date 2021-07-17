@@ -1,12 +1,20 @@
 <?php
+/**
+ * Functions concerning page header.
+ *
+ * @package rotaract-family
+ */
+
 $theme_dir = get_stylesheet_directory();
 require $theme_dir . '/inc/logo.php';
 
-add_action( 'generate_before_header', 'generate_social_menu', 4 );
 function generate_social_menu() {
-	$items = array_filter( listSocialItems(), function ( $e ) {
-		return ! empty( $e );
-	} );
+	$items = array_filter(
+		listSocialItems(),
+		function ( $e ) {
+			return ! empty( $e );
+		}
+	);
 
 	if ( empty( $items ) ) {
 		return;
@@ -19,9 +27,10 @@ function generate_social_menu() {
 				foreach ( $items as $type => $link ) {
 					echo sprintf(
 						'<a href="%2$s" title="%1$s" target="_blank" rel="noreferrer" class="social-media-link" alt="1$s Logo"><img src="%3$s" /></a>',
-						ucfirst( $type ),
+						esc_attr( ucfirst( $type ) ),
 						'email' === $type ? 'mailto:' . antispambot( is_email( $link ) ) : $link,
-						get_stylesheet_directory_uri() . '/assets/img/socialmedia/' . $type . '.svg'
+						esc_url( 'email' === $type ? 'mailto:' . antispambot( is_email( $link ) ) : $link ),
+						esc_url( get_stylesheet_directory_uri() . '/assets/img/socialmedia/' . $type . '.svg' )
 					);
 				}
 				?>
@@ -30,15 +39,16 @@ function generate_social_menu() {
 	</div>
 	<?php
 }
+add_action( 'generate_before_header', 'generate_social_menu', 4 );
 
 /**
  * Override site title construction for building Rotaract/Rotary/Interact logos
  */
 function generate_construct_site_title() {
 	$text_colors       = array(
-		'rac' => '#d91b5c',   // cranberry
-		'iac' => '#019fcb',   // skyblue
-		'rc'  => '#17458f'    // royal blue
+		'rac' => '#d91b5c',   /* cranberry  */
+		'iac' => '#019fcb',   /* skyblue    */
+		'rc'  => '#17458f',   /* royal blue */
 	);
 	$generate_settings = wp_parse_args(
 		get_option( 'generate_settings', array() ),
@@ -119,7 +129,6 @@ function generate_construct_site_title() {
  * Prevent building the header widget.
  */
 function generate_construct_header_widget() {
-	return;
 }
 
 /**
@@ -136,9 +145,9 @@ if ( ! get_option( 'site_icon', false ) ) {
 			<link rel="manifest" href="%1$s/assets/icons/%2$s/site.webmanifest">
 			<link rel="mask-icon" href="%1$s/assets/icons/safari-pinned-tab.svg" color="%3$s">
 			<meta name="msapplication-config" content="%1$s/assets/icons/%2$s/browserconfig.xml">',
-			get_stylesheet_directory_uri(),
-			get_theme_mod( 'org_type', 'rac' ),
-			$GLOBALS['wheel_colors'][ get_theme_mod( 'org_type', 'rac' ) ]
+			esc_url( get_stylesheet_directory_uri() ),
+			esc_attr( get_theme_mod( 'org_type', 'rac' ) ),
+			esc_attr( $GLOBALS['wheel_colors'][ get_theme_mod( 'org_type', 'rac' ) ] )
 		);
 	}
 }
@@ -146,12 +155,11 @@ if ( ! get_option( 'site_icon', false ) ) {
 /**
  * Add theme color meta attribute for android browsers and Windows tiles.
  */
-add_action( 'wp_head', 'generate_add_theme_color' );
-
 function generate_add_theme_color() {
 	printf(
 		'<meta name="theme-color" content="%1$s">
 		<meta name="msapplication-TileColor" content="%1$s">',
-		get_theme_mod( 'header_color', $GLOBALS['family_colors'][ get_theme_mod( 'org_type', 'rac' ) ] )
+		esc_attr( get_theme_mod( 'header_color', $GLOBALS['family_colors'][ get_theme_mod( 'org_type', 'rac' ) ] ) )
 	);
 }
+add_action( 'wp_head', 'generate_add_theme_color' );
