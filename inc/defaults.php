@@ -1,19 +1,25 @@
 <?php
+/**
+ * Contains and sets bunch of defaults: color, font, ...
+ *
+ * @package rotaract-family
+ */
 
 $family_colors = array(
-	'rac' => '#d91b5c',   // cranberry
-	'iac' => '#019fcb',   // skyblue
-	'rc'  => '#0050a2'    // azure
+	'rac' => '#d91b5c',   /* cranberry */
+	'iac' => '#019fcb',   /* skyblue   */
+	'rc'  => '#0050a2',   /* azure     */
 );
 $wheel_colors  = array(
-	'rac' => '#d91b5c',   // cranberry
-	'iac' => '#019fcb',   // skyblue
-	'rc'  => '#f7a81b'    // gold
+	'rac' => '#d91b5c',   /* cranberry */
+	'iac' => '#019fcb',   /* skyblue   */
+	'rc'  => '#f7a81b',   /* gold      */
 );
 
-add_filter( 'generate_option_defaults', 'child_new_defaults' );
 /**
  * Override parent defaults
+ *
+ * @param array $options new default values will override its previous values.
  */
 function child_new_defaults( $options ) {
 	$options['logo_layout']      = 'club';
@@ -24,10 +30,12 @@ function child_new_defaults( $options ) {
 
 	return $options;
 }
+add_filter( 'generate_option_defaults', 'child_new_defaults' );
 
-add_filter( 'generate_font_option_defaults', 'child_new_font_defaults' );
 /**
  * Override parent font defaults
+ *
+ * @param array $options new default values will override its previous values.
  */
 function child_new_font_defaults( $options ) {
 	$options['font_body']        = 'Open Sans';
@@ -36,3 +44,4 @@ function child_new_font_defaults( $options ) {
 
 	return $options;
 }
+add_filter( 'generate_font_option_defaults', 'child_new_font_defaults' );
