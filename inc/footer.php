@@ -1,4 +1,9 @@
 <?php
+/**
+ * Functions concerning page footer.
+ *
+ * @package rotary-family
+ */
 
 add_action( 'generate_credits', 'generate_add_footer_info' );
 /**
