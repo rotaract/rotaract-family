@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress.Rotaract-DE">
+	<description>Rotaract Germany Coding Standard</description>
+
+	<arg name="parallel" value="8" />
+
+	<config name="text_domain" value="rotaract-family" />
+
+	<exclude-pattern>vendor/</exclude-pattern>
+	<exclude-pattern>node_modules/</exclude-pattern>
+	<exclude-pattern>images/</exclude-pattern>
+
+	<rule ref="WordPress">
+	</rule>
+</ruleset>
