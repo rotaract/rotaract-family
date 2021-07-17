@@ -1,12 +1,10 @@
 <?php
 
 /**
- * Rotaract Family customizer controls
+ * Rotaract Family customizer controls.
  */
-add_action( 'customize_register', 'rotaract_family_controls', 11 );
 function rotaract_family_controls( $wp_customize ) {
-
-	// SECTION Rotaract Family
+	/* SECTION Rotaract Family */
 	$wp_customize->add_section(
 		'logo',
 		array(
@@ -111,7 +109,7 @@ function rotaract_family_controls( $wp_customize ) {
 		)
 	);
 
-	// SECTION Footer Options
+	/* SECTION Footer Options */
 	$wp_customize->add_section(
 		'footer-options',
 		array(
@@ -181,7 +179,7 @@ function rotaract_family_controls( $wp_customize ) {
 		)
 	);
 
-	// SECTION Social Media
+	/* SECTION Social Media */
 	$wp_customize->add_section(
 		'social-media',
 		array(
@@ -363,7 +361,7 @@ function rotaract_family_controls( $wp_customize ) {
 		)
 	);
 
-	// SECTION Own Javascript
+	/* SECTION Own Javascript */
 	$wp_customize->add_section(
 		'own-javascript',
 		array(
@@ -428,6 +426,7 @@ function rotaract_family_controls( $wp_customize ) {
 		)
 	);
 }
+add_action( 'customize_register', 'rotaract_family_controls', 11 );
 
 function listSocialItems() {
 	return array(
@@ -443,7 +442,7 @@ function listSocialItems() {
 }
 
 /**
- * Print custom javascript
+ * Print custom JavaScript.
  */
 if ( ! empty( get_theme_mod( 'custom_page_js' ) ) ) {
 	add_action( 'wp_footer', 'custom_page_js', 999 );
