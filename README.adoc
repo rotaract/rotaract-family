@@ -1,0 +1,90 @@
+= Rotaract Family
+
+ifdef::env-github[]
+:tip-caption: 💡
+:note-caption: ℹ
+:important-caption: ❗
+:caution-caption: 🔥
+:warning-caption: ⚠
+endif::[]
+
+:badge_url: https://img.shields.io
+:slug: rotaract-family
+:github-repo: https://github.com/rotaract/{slug}
+
+// General Badges
+image:{badge_url}/badge/Open_Source-❤-orange[Open Source, link="https://opensource.org"]
+
+A lightweight WordPress theme for the world of Rotaract
+
+image::preview.webp[Screenshot of theme 'Rotaract Family']
+
+== ⭐ Features
+
+. *Performance* +
+  The design itself is optimized for performance and compression. This makes your pages load even faster.
+. *Customization* +
+  Change layouts, colors and menus with just few clicks.
+. *Responsiveness* +
+  No matter what device, your website automatically adapts
+. *Logo Editor* +
+  Design your club logo the easy way. For Rotaract, Interact and Rotary!
+. *Data Protection* +
+  Important requirements of the DSG-VO are fulfilled.
+. *Compatibility* +
+  Compatible with all plugins available in Rotaract Hosting. And many more in the future!
+. *Multilingualism* +
+  Translations available for English and German.
+
+*Are you missing any features or languages?*
+Feel free telling us and {github-repo}/issues/new[open a new issue] describing your ideas.
+
+== 🔧 Installation
+
+This theme is already available for German Rotaract clubs, districts and projects.
+Beyond that it is easy to setup on any WordPress project.
+
+=== In Rotaract Hosting (Germany only)
+
+If you get a new website this theme will already be activated by default.
+Enjoy!
+
+You can activate it on an existing website in your WordPress backend in *Design/Theme*.
+
+=== In your own WordPress project
+
+. Download {github-repo}/releases/latest/download/rotaract-family.zip[latest zip file].
+. Use the manual theme installation within your backend and choose the downloaded file.
+
+== 🪄 Customizing
+
+After setup you should open the customizer and set your theme options.
+
+== Development Setup
+
+. Clone repository
++
+[source, shell]
+----
+git clone git://github.com/rotaract/rotaract-family && cd rotaract-family
+----
+. Install https://make.wordpress.org/cli/handbook/guides/installing/[WP-CLI]
+. Generate I18n MO files
++
+[source, shell]
+----
+wp i18n make-mo languages
+----
+
+== ⚖️ Legal Notices
+
+Copyright (c) 2021, Rotaract Deutschland
+
+Licensed under European Union Public License 1.2 (EUPL-1.2).
+
+_Rotary_, _Rotaract_ and _Interact_ are trademarks or registered trademarks of Rotary International and are used with the permission of Rotary International.
+Other trademarks not owned by Rotary International are the property of their respective owners.
+The license above does not grant any rights under trademark law and all such rights are reserved.
+Modified versions must be renamed to avoid use of any Rotary International trademarks, including but not limited to _Rotary_, _Rotaract_ and _Interact_.
+
+All Rotary, Rotaract and Interact logos and graphics are under copyright.
