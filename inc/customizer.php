@@ -451,6 +451,9 @@ function list_social_items() {
  */
 if ( ! empty( get_theme_mod( 'custom_page_js' ) ) ) {
 	add_action( 'wp_footer', 'custom_page_js', 999 );
+	/**
+	 * Include custom JS on website.
+	 */
 	function custom_page_js() {
 		echo get_theme_mod( 'custom_page_js' );
 	}
