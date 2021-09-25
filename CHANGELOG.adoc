@@ -1,0 +1,121 @@
+= Changelog
+
+:repo: https://github.com/rotaract/rotaract-family
+:github-pr: {repo}/pull
+:compare: {repo}/compare
+
+All notable changes to this project will be documented in this file.
+
+// The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog], and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
+
+== {compare}/v1.1\...main[Unreleased]
+
+=== Added
+
+* POT file for further translations. {github-pr}/15[#15]
+
+=== Fixed
+
+* Fix Size of Contact Form 7 acceptance textbox. {github-pr}/20[#20]
+* Fix HTML attributes of social media icons. {github-pr}/18[#18]
+* Fix theme's directory path for loading translation files. {github-pr}/23[#23]
+
+== {compare}/v1.0\...v1.1[1.1] - 2021-06-04
+
+=== Added
+
+* Internationalize theme (EN + DE).
+* GitHub Action workflow building the theme ZIP file.
+
+=== Changed
+
+* Fix comment and documentation style.
+* Describe development setup in README.
+
+== {compare}/v0.5\...v1.0[1.0] - 2021-05-28
+
+=== Added
+
+* Default favicon based on club type.
+* Apple touch icons.
+* Support for Android, Safari and Windows tiles.
+
+=== Changed
+
+* Color picker to customize for individual control of footer background color.
+* Code reformatting based on added .editorconfig.
+* Add comments and code documentation.
+
+=== Fixed
+
+* Add min/max constraints for logo text in customizer.
+* Fix typos.
+* Fix adjustment of club logo in different menu layouts.
+
+== {compare}/v0.4\...v0.5[0.5] - 2021-05-23
+
+=== Added
+
+* Color Picker to customize header/social links background.
+* Support new logo layout.
+* Set default values for theme settings.
+* Link to latest theme ZIP file in README pointing to GitHub releases page.
+
+=== Changed
+
+* Replace SVG images with dynamic SVG creation.
+
+=== Fixed
+
+* Fix logo layout on iOS.
+* Main menu style.
+
+== {compare}/v0.3\...v0.4[0.4] - 2021-01-18
+
+=== Added
+
+* Page padding.
+* Page reload in customizer to show effect of updated values instantly.
+
+=== Changed
+
+* Compress SVG files with SVGO.
+* Customizer settings.
+
+== {compare}/v0.2\...v0.3[0.3] - 2021-01-10
+
+=== Added
+
+* CSS for main navigation.
+* CSS for input forms including cf7 and pdb.
+* Social media link icons.
+* Font files.
+
+=== Changed
+
+* Set font size.
+* Change the way of setting default values.
+* External Links require user confirmation.
+
+=== Fixed
+
+* Remove debugging Javascript output.
+
+== {compare}/v0.1\...v0.2[0.2] - 2021-01-09
+
+=== Added
+
+* Custom footer menu with customized page links.
+* Improve shadow and radius support for different layouts.
+* Improve header and content container styles.
+
+=== Changed
+
+* Drop premium and font section in customizer.
+
+== {compare}/dd5057c\...v0.1[0.1] - 2021-01-09
+
+=== Added
+
+* Basic WordPress theme files.
+* Initial functionality.
