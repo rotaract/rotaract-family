@@ -56,3 +56,16 @@ After setup you should open the customizer and set your theme options.
     ```sh
     wp i18n make-mo languages
     ```
+
+## ⚖️ Legal Notices
+
+Copyright (c) 2021, Rotaract Deutschland
+
+Licensed under European Union Public License 1.2 (EUPL-1.2).
+
+_Rotary_, _Rotaract_ and _Interact_ are trademarks or registered trademarks of Rotary International and are used with the permission of Rotary International.
+Other trademarks not owned by Rotary International are the property of their respective owners.
+The license above does not grant any rights under trademark law and all such rights are reserved.
+Modified versions must be renamed to avoid use of any Rotary International trademarks, including but not limited to _Rotary_, _Rotaract_ and _Interact_.
+
+All Rotary, Rotaract and Interact logos and graphics are under copyright.
