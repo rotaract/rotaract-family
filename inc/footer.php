@@ -11,7 +11,7 @@
 function generate_add_footer_info() {
 	$copyright = sprintf(
 		'<div class="copyright">&copy; %1$s %2$s</div>',
-		date( 'Y' ), // phpcs:ignore
+		wp_date( 'Y' ),
 		trim( get_theme_mod( 'copyright' ) ) ?: get_bloginfo( 'title' )
 	);
 
