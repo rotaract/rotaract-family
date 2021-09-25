@@ -14,16 +14,19 @@ function generate_add_footer_info() {
 		date( 'Y' ), // phpcs:ignore
 		trim( get_theme_mod( 'copyright' ) ) ?: get_bloginfo( 'title' )
 	);
-	$contact   = get_theme_mod( 'contact_page' ) ? sprintf(
+
+	$contact = get_theme_mod( 'contact_page' ) ? sprintf(
 		'<a href="%1$s" title="' . __( 'Contact', 'rotaract-family' ) . '">' . __( 'Contact', 'rotaract-family' ) . '</a> | ',
 		get_permalink( get_theme_mod( 'contact_page' ) )
 	) : '';
-	$legals    = sprintf(
+
+	$legals = sprintf(
 		'<a href="%1$s" title="' . __( 'Privacy Policy', 'rotaract-family' ) . '">' . __( 'Privacy Policy', 'rotaract-family' ) . '</a> | <a href="%2$s" title="' . __( 'Imprint', 'rotaract-family' ) . '">' . __( 'Imprint', 'rotaract-family' ) . '</a>',
 		get_privacy_policy_url() ?: 'https://rotaract.de/datenschutz',
 		get_theme_mod( 'impress_page' ) ? get_permalink( get_theme_mod( 'impress_page' ) ) : __( '/imprint', 'rotaract-family' )
 	);
-	$text      = $copyright . '<div>' . $contact . $legals . '</div>';
+
+	$text = $copyright . '<div>' . $contact . $legals . '</div>';
 
 	echo apply_filters( 'generate_copyright', $text ); // phpcs:ignore
 }
