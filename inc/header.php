@@ -10,7 +10,7 @@ require $theme_dir . '/inc/logo.php';
 
 function generate_social_menu() {
 	$items = array_filter(
-		listSocialItems(),
+		list_social_items(),
 		function ( $e ) {
 			return ! empty( $e );
 		}

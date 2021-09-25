@@ -428,7 +428,12 @@ function rotaract_family_controls( $wp_customize ) {
 }
 add_action( 'customize_register', 'rotaract_family_controls', 11 );
 
-function listSocialItems() {
+/**
+ * Returns array of social media icon links.
+ *
+ * @return array of social media icons
+ */
+function list_social_items() {
 	return array(
 		'facebook'  => get_theme_mod( 'facebook', '' ),
 		'instagram' => get_theme_mod( 'instagram', '' ),
