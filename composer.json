@@ -31,5 +31,10 @@
 	"scripts": {
 		"lint": "phpcs --standard=phpcs.xml",
 		"translate": "wp-cli i18n make-mo languages"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	}
 }
