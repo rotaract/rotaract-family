@@ -1,14 +1,5 @@
-### IDE ###
-## PhpStorm / IntelliJ IDEA ##
-.idea/
-## VS Code ##
-.vscode/*
-!.vscode/extensions.json
-
-### Dependencies ###
-## Composer ##
+# Composer / PHP Dependencies
 /vendor/
 
-### WordPress ###
-## I18n
+# WordPress I18n
 /languages/*.mo
