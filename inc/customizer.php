@@ -265,30 +265,6 @@ function rotaract_family_controls( $wp_customize ) {
 			'code_type' => 'text/html'
 		) )
 	);
-	$wp_customize->add_setting( 'header_color', array(
-		'default'           => 'var(--rotaract)',
-		'sanitize_callback' => 'generate_sanitize_hex_color'
-	) );
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control( $wp_customize, 'header_color', array(
-			'label'    => __('Header', 'rotaract-family'),
-			'priority' => 5,
-			'section'  => 'body_section',
-			'settings' => 'header_color'
-		) )
-	);
-	$wp_customize->add_setting( 'footer_color', array(
-		'default'           => '#687d90',
-		'sanitize_callback' => 'generate_sanitize_hex_color'
-	) );
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control( $wp_customize, 'footer_color', array(
-			'label'    => __('Footer', 'rotaract-family'),
-			'priority' => 6,
-			'section'  => 'body_section',
-			'settings' => 'footer_color'
-		) )
-	);
 }
 
 function listSocialItems() {

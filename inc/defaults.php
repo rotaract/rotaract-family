@@ -86,6 +86,16 @@ function child_new_defaults( $options ) {
 	return $options;
 }
 
+add_filter( 'generate_color_option_defaults', 'child_new_color_defaults' );
+/**
+ * Override parent color defaults
+ */
+function child_new_color_defaults( $options ) {
+	$options['footer_background_color'] = 'var(--slate)';
+
+	return $options;
+}
+
 add_filter( 'generate_font_option_defaults', 'child_new_font_defaults' );
 /**
  * Override parent font defaults
