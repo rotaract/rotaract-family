@@ -16,12 +16,13 @@ add_filter( 'generate_option_defaults', 'child_new_defaults' );
  * Override parent defaults
  */
 function child_new_defaults( $options ) {
-	$options['logo_layout']      = 'club';
-	$options['org_type']         = 'rac';
-	$options['logo_text_line_1'] = get_bloginfo( 'title' );
-	$options['background_color'] = '#f4f4f4';
-	$options['link_color']       = 'var(--rotaract)';
-	$options['global_colors']    = array_merge(
+	$options['logo_layout']             = 'club';
+	$options['org_type']                = 'rac';
+	$options['logo_text_line_1']        = get_bloginfo( 'title' );
+	$options['background_color']        = '#f4f4f4';
+	$options['link_color']              = 'var(--rotaract)';
+	$options['social_media_head_color'] = 'var(--rotaract)';
+	$options['global_colors']           = array_merge(
 		$options['global_colors'],
 		array(
 			array(

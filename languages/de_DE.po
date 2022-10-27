@@ -128,9 +128,9 @@ msgstr ""
 "<strong>Benutzung auf eigene Gefahr! Pass bitte deine Datenschutzerklärung "
 "entsprechend an, falls du hier externe Scripte einbindest.</strong>"
 
-#: inc/customizer.php:274
-msgid "Header"
-msgstr "Kopfzeile"
+#: inc/customizer.php:289
+msgid "Social Media Head"
+msgstr "Social Media Kopfzeile"
 
 #: inc/footer.php:14
 msgid "Contact"

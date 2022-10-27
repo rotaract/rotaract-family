@@ -100,8 +100,8 @@ msgstr ""
 msgid "Add your custom JavaScript code. It will be inserted at the end of the HTML's &lt;body&gt;. The &lt;script&gt; tags has to be included here. <strong>CAUTION: Use at your own risk! Please adjust your privacy policy accordingly if you include external scripts here.</strong>"
 msgstr ""
 
-#: inc/customizer.php:274
-msgid "Header"
+#: inc/customizer.php:289
+msgid "Social Media Head"
 msgstr ""
 
 #: inc/footer.php:14
