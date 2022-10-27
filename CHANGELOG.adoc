@@ -8,7 +8,17 @@ All notable changes to this project will be documented in this file.
 
 // The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog], and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
 
-== {compare}/v1.3\...main[Unreleased]
+== {compare}/v1.4\...main[Unreleased]
+
+== {compare}/v1.3\...v1.4[1.4] - 2022-10-27
+
+=== Fixed
+
+* Make use of generatepress' new color manager and add Rotary colors to default palette.
+
+=== Changed
+
+* Set color code of Cranberry due to new RI design rules.
 
 == {compare}/v1.2\...v1.3[1.3] - 2022-03-08
 
