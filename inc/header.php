@@ -36,7 +36,7 @@ function generate_social_menu() {
  */
 function generate_construct_site_title() {
 	$text_colors       = array(
-		'rac' => '#d91b5c',   // cranberry
+		'rac' => '#d41367',   // cranberry
 		'iac' => '#019fcb',   // skyblue
 		'rc'  => '#17458f'    // royal blue
 	);

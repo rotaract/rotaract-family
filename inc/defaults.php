@@ -1,12 +1,12 @@
 <?php
 
 $family_colors = array(
-	'rac' => '#d91b5c',   // cranberry
+	'rac' => '#d41367',   // cranberry
 	'iac' => '#019fcb',   // skyblue
 	'rc'  => '#0050a2'    // azure
 );
 $wheel_colors  = array(
-	'rac' => '#d91b5c',   // cranberry
+	'rac' => '#d41367',   // cranberry
 	'iac' => '#019fcb',   // skyblue
 	'rc'  => '#f7a81b'    // gold
 );
@@ -27,7 +27,7 @@ function child_new_defaults( $options ) {
 			array(
 				'name' => 'Cranberry',
 				'slug' => 'rotaract',
-				'color' => '#d91b5c',
+				'color' => '#d41367',
 			),
 			array(
 				'name' => 'Azure',
