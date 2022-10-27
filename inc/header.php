@@ -152,6 +152,6 @@ function generate_add_theme_color() {
 	printf(
 		'<meta name="theme-color" content="%1$s">
 		<meta name="msapplication-TileColor" content="%1$s">',
-		get_theme_mod( 'header_color', $GLOBALS['family_colors'][ get_theme_mod( 'org_type', 'rac' ) ] )
+		get_theme_mod( 'header_color', 'var(--rotaract)' )
 	);
 }

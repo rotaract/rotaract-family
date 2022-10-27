@@ -20,7 +20,67 @@ function child_new_defaults( $options ) {
 	$options['org_type']         = 'rac';
 	$options['logo_text_line_1'] = get_bloginfo( 'title' );
 	$options['background_color'] = '#f4f4f4';
-	$options['link_color']       = $GLOBALS['family_colors'][ get_theme_mod( 'org_type', 'rac' ) ];
+	$options['link_color']       = 'var(--rotaract)';
+	$options['global_colors']    = array_merge(
+		$options['global_colors'],
+		array(
+			array(
+				'name' => 'Cranberry',
+				'slug' => 'rotaract',
+				'color' => '#d91b5c',
+			),
+			array(
+				'name' => 'Azure',
+				'slug' => 'azure',
+				'color' => '#0050a2',
+			),
+			array(
+				'name' => 'Royal Blue',
+				'slug' => 'royal-blue',
+				'color' => '#0c3c7c',
+			),
+			array(
+				'name' => 'Sky Blue',
+				'slug' => 'sky-blue',
+				'color' => '#019fcb',
+			),
+			array(
+				'name' => 'Gold',
+				'slug' => 'gold',
+				'color' => '#f7a81b',
+			),
+			array(
+				'name' => 'Violet',
+				'slug' => 'violet',
+				'color' => '#872175',
+			),
+			array(
+				'name' => 'Orange',
+				'slug' => 'orange',
+				'color' => '#ff7600',
+			),
+			array(
+				'name' => 'Lavender',
+				'slug' => 'lavender',
+				'color' => '#c6bcd0',
+			),
+			array(
+				'name' => 'Powder Blue',
+				'slug' => 'powder-blue',
+				'color' => '#c9dee9',
+			),
+			array(
+				'name' => 'Slate',
+				'slug' => 'slate',
+				'color' => '#687d90',
+			),
+			array(
+				'name' => 'Mist',
+				'slug' => 'mist',
+				'color' => '#9ea6b4',
+			),
+		)
+	);
 
 	return $options;
 }

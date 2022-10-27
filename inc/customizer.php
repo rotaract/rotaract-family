@@ -266,7 +266,7 @@ function rotaract_family_controls( $wp_customize ) {
 		) )
 	);
 	$wp_customize->add_setting( 'header_color', array(
-		'default'           => $GLOBALS['family_colors'][ get_theme_mod( 'org_type', 'rac' ) ],
+		'default'           => 'var(--rotaract)',
 		'sanitize_callback' => 'generate_sanitize_hex_color'
 	) );
 	$wp_customize->add_control(
