@@ -2,12 +2,12 @@
 
 $family_colors = array(
 	'rac' => '#d41367',   // cranberry
-	'iac' => '#019fcb',   // skyblue
-	'rc'  => '#0050a2'    // azure
+	'iac' => '#00a2e0',   // skyblue
+	'rc'  => '#0067c8'    // azure
 );
 $wheel_colors  = array(
 	'rac' => '#d41367',   // cranberry
-	'iac' => '#019fcb',   // skyblue
+	'iac' => '#00a2e0',   // skyblue
 	'rc'  => '#f7a81b'    // gold
 );
 
@@ -33,17 +33,17 @@ function child_new_defaults( $options ) {
 			array(
 				'name' => 'Azure',
 				'slug' => 'azure',
-				'color' => '#0050a2',
+				'color' => '#0067c8',
 			),
 			array(
 				'name' => 'Royal Blue',
 				'slug' => 'royal-blue',
-				'color' => '#0c3c7c',
+				'color' => '#17458f',
 			),
 			array(
 				'name' => 'Sky Blue',
 				'slug' => 'sky-blue',
-				'color' => '#019fcb',
+				'color' => '#00a2e0',
 			),
 			array(
 				'name' => 'Gold',
@@ -51,9 +51,24 @@ function child_new_defaults( $options ) {
 				'color' => '#f7a81b',
 			),
 			array(
+				'name' => 'Cardinal',
+				'slug' => 'cardinal',
+				'color' => '#e02927',
+			),
+			array(
+				'name' => 'Turquoise',
+				'slug' => 'turquoise',
+				'color' => '#00adbb',
+			),
+			array(
 				'name' => 'Violet',
 				'slug' => 'violet',
-				'color' => '#872175',
+				'color' => '#901f93',
+			),
+			array(
+				'name' => 'Grass',
+				'slug' => 'grass',
+				'color' => '#009739',
 			),
 			array(
 				'name' => 'Orange',
@@ -68,17 +83,22 @@ function child_new_defaults( $options ) {
 			array(
 				'name' => 'Powder Blue',
 				'slug' => 'powder-blue',
-				'color' => '#c9dee9',
+				'color' => '#b9d9eb',
 			),
 			array(
 				'name' => 'Slate',
 				'slug' => 'slate',
-				'color' => '#687d90',
+				'color' => '#657f99',
+			),
+			array(
+				'name' => 'Charcoal',
+				'slug' => 'charcoal',
+				'color' => '#54565a',
 			),
 			array(
 				'name' => 'Mist',
 				'slug' => 'mist',
-				'color' => '#9ea6b4',
+				'color' => '#9ba4b4',
 			),
 		)
 	);
