@@ -18,7 +18,7 @@ function generate_social_menu() {
 				<?php
 				foreach ( $items as $type => $link ) {
 					echo sprintf(
-						'<a href="%2$s" title="%1$s" target="_blank" rel="noreferrer" class="social-media-link" alt="1$s Logo"><img src="%3$s" /></a>',
+						'<a href="%2$s" title="%1$s" target="_blank" rel="noreferrer" class="social-media-link"><img src="%3$s" width="22" height="22" title="%1$s" alt="%1$s" /></a>',
 						ucfirst( $type ),
 						'email' === $type ? 'mailto:' . antispambot( is_email( $link ) ) : $link,
 						get_stylesheet_directory_uri() . '/assets/img/socialmedia/' . $type . '.svg'
