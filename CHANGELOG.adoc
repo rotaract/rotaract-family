@@ -10,6 +10,18 @@ All notable changes to this project will be documented in this file.
 
 == {compare}/v1.4.1\...main[Unreleased]
 
+== {compare}/v1.4.1\...v1.4.2[1.4.2] - 2022-11-28
+
+=== Fixed
+
+* Fix color codes to match Rotary's latest guidelines.
+
+=== Added
+
+* Improvements for Google PageSpeed
+** Load fonts in non-blocking swap period.
+** Set width and height for social media icons.
+
 == {compare}/v1.4\...v1.4.1[1.4.1] - 2022-10-27
 
 === Fixed
