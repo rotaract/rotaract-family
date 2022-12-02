@@ -118,7 +118,7 @@ function rotaract_family_controls( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'impress_page', array(
 			'label'          => __('Imprint Page', 'rotaract-family'),
-			'description'    => sprintf( __('Which page contains the imprint. Default: "%s"', 'rotaract-family') . __('/imprint', 'rotaract-family') ),
+			'description'    => __('Which page contains the imprint. Default: "%s"', 'rotaract-family') . __('/imprint', 'rotaract-family'),
 			'section'        => 'footer-options',
 			'settings'       => 'impress_page',
 			'type'           => 'dropdown-pages',
