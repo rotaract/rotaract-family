@@ -12,3 +12,9 @@ document.querySelectorAll('a').forEach(function(elem) {
 		}
 	})
 });
+
+jQuery(function () {
+	if ( typeof Snowflakes === 'function' ) {
+		new Snowflakes();
+	}
+});
