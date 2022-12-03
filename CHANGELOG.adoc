@@ -8,7 +8,17 @@ All notable changes to this project will be documented in this file.
 
 // The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog], and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
 
-== {compare}/v1.4.1\...main[Unreleased]
+== {compare}/v1.5.0\...main[Unreleased]
+
+== {compare}/v1.4.1\...v1.4.2[1.5.0] - 2022-12-03
+
+=== Fixed
+
+* PHP error caused by sprintf function in customizer.
+
+=== Added
+
+* Snowflakes. No really.
 
 == {compare}/v1.4.1\...v1.4.2[1.4.2] - 2022-11-28
 
