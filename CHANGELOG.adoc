@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 
 == {compare}/v1.5.0\...main[Unreleased]
 
-== {compare}/v1.4.1\...v1.4.2[1.5.0] - 2022-12-03
+== {compare}/v1.4.1\...v1.5.0[1.5.0] - 2022-12-03
 
 === Fixed
 
