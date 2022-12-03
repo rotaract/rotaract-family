@@ -108,7 +108,15 @@ msgstr ""
 msgid "/imprint"
 msgstr "/impressum"
 
-#: inc/customizer.php:133
+#: inc/customizer.php:135
+msgid "Let it snow"
+msgstr "Lass es schneien"
+
+#: inc/customizer.php:136
+msgid "Activate for snow effect."
+msgstr "Aktivieren, um Schneefall auf der Seite zu haben."
+
+#: inc/customizer.php:148
 msgid "Link your Social Media accounts."
 msgstr "Füge die URL für jedes soziale Profil hinzu."
 
