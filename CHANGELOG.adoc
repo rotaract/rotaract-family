@@ -8,7 +8,13 @@ All notable changes to this project will be documented in this file.
 
 // The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog], and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
 
-== {compare}/v1.5.1\...main[Unreleased]
+== {compare}/v1.6.0\...main[Unreleased]
+
+== {compare}/v1.5.1\...v1.6.0[1.6.0] - 2022-12-23
+
+=== Added
+
+* New customizer setting for cookie policy page link in footer.
 
 == {compare}/v1.5.0\...v1.5.1[1.5.1] - 2022-12-13
 
