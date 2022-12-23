@@ -108,6 +108,14 @@ msgstr ""
 msgid "/imprint"
 msgstr "/impressum"
 
+#: inc/customizer.php:133
+msgid "Cookie Policy"
+msgstr "Cookie-Richtlinie"
+
+#: inc/customizer.php:134
+msgid "Which page contains the cookie policy?"
+msgstr "Welche Seite enthält die Cookie-Richtlinie?"
+
 #: inc/customizer.php:135
 msgid "Let it snow"
 msgstr "Lass es schneien"
@@ -147,3 +155,7 @@ msgstr "Kontakt"
 #: inc/footer.php:18
 msgid "Imprint"
 msgstr "Impressum"
+
+#: inc/footer.php:23
+msgid "Cookies"
+msgstr "Cookies"

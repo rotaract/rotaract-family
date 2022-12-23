@@ -81,7 +81,15 @@ msgstr ""
 
 #: inc/customizer.php:121
 #, php-format
-msgid "Which page contains the imprint. Default: \"%s\""
+msgid "Which page contains the imprint? Default: \"%s\""
+msgstr ""
+
+#: inc/customizer.php:133
+msgid "Cookie Policy"
+msgstr ""
+
+#: inc/customizer.php:134
+msgid "Which page contains the cookie policy?"
 msgstr ""
 
 #: inc/customizer.php:121 inc/footer.php:20

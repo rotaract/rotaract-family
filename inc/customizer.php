@@ -118,11 +118,24 @@ function rotaract_family_controls( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'impress_page', array(
 			'label'          => __('Imprint Page', 'rotaract-family'),
-			'description'    => __('Which page contains the imprint. Default: "%s"', 'rotaract-family') . __('/imprint', 'rotaract-family'),
+			'description'    => __('Which page contains the imprint? Default: "%s"', 'rotaract-family') . __('/imprint', 'rotaract-family'),
 			'section'        => 'footer-options',
 			'settings'       => 'impress_page',
 			'type'           => 'dropdown-pages',
 			'allow_addition' => true
+		) )
+	);
+	$wp_customize->add_setting( 'cookie_page', array(
+		'type' => 'theme_mod'
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Control( $wp_customize, 'cookie_page', array(
+			'label'          => __('Cookie Policy', 'rotaract-family'),
+			'description'    => __('Which page contains the cookie policy?', 'rotaract-family'),
+			'section'        => 'footer-options',
+			'settings'       => 'cookie_page',
+			'type'           => 'dropdown-pages',
+			'allow_addition' => false
 		) )
 	);
 

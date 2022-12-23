@@ -19,7 +19,11 @@ function generate_add_footer_info() {
 		get_privacy_policy_url() ?: 'https://rotaract.de/datenschutz',
 		get_theme_mod( 'impress_page' ) ? get_permalink( get_theme_mod( 'impress_page' ) ) : __('/imprint', 'rotaract-family')
 	);
-	$text = $copyright . '<div>' . $contact . $legals . '</div>';
+    $cookies = get_theme_mod( 'cookie_page' ) ? sprintf(
+        '<a href="%1$s" title="' . __('Cookies', 'rotaract-family') . '">' . __('Cookies', 'rotaract-family') . '</a> | ',
+		get_permalink( get_theme_mod( 'cookie_page' ) )
+    ) : '';
+	$text = $copyright . '<div>' . $cookies . $contact . $legals . '</div>';
 
 	echo apply_filters( 'generate_copyright', $text ); // phpcs:ignore
 }
