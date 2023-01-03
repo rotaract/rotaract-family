@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Rotaract Germany
+# Copyright (C) 2023 Rotaract Germany
 # This file is distributed under the same license as the Rotaract Family Theme.
 #, fuzzy
 msgid ""

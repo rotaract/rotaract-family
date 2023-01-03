@@ -78,7 +78,7 @@ wp i18n make-mo languages
 
 == ⚖️ Legal Notices
 
-Copyright (c) 2021, Rotaract Deutschland
+Copyright (c) 2023, Rotaract Deutschland
 
 Licensed under European Union Public License 1.2 (EUPL-1.2).
 
