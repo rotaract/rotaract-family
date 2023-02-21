@@ -139,15 +139,15 @@ function rotaract_family_controls( $wp_customize ) {
 		) )
 	);
 
-	$wp_customize->add_setting( 'let_it_snow', array(
+	$wp_customize->add_setting( 'snowflakes', array(
 		'type' => 'theme_mod',
-		'default' => true
+		'default' => false
 	) );
 	$wp_customize->add_control(
-        new WP_Customize_Control( $wp_customize, 'let_it_snow', array(
+        new WP_Customize_Control( $wp_customize, 'snowflakes', array(
 			'label'          => __('Let it snow', 'rotaract-family'),
 			'description'    => __('Activate for snow effect.', 'rotaract-family'),
-			'settings'       => 'let_it_snow',
+			'settings'       => 'snowflakes',
 			'section'        => 'generate_general_section',
 			'type'           => 'checkbox',
 			'allow_addition' => true
