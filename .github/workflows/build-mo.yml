@@ -1,4 +1,4 @@
-name: Generate MO files for I18n
+name: Build Plugin ZIP
 
 on:
   push:
