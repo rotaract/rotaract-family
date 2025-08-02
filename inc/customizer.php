@@ -190,6 +190,21 @@ function rotaract_family_controls( $wp_customize ) {
 			)
 		) )
 	);
+	$wp_customize->add_setting( 'tiktok', array(
+		'type' => 'theme_mod'
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Control( $wp_customize, 'tiktok', array(
+			'label'       => 'TikTok',
+			'section'     => 'social-media',
+			'settings'    => 'tiktok',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://www.tiktok.com/@my-rotaract-club',
+				'pattern'     => 'https:\/\/(www\.)?tiktok\.com\/@.*',
+			)
+		) )
+	);
 	$wp_customize->add_setting( 'twitter', array(
 		'type' => 'theme_mod'
 	) );
@@ -299,6 +314,7 @@ function listSocialItems() {
 	return array(
 		'facebook'  => get_theme_mod( 'facebook', '' ),
 		'instagram' => get_theme_mod( 'instagram', '' ),
+		'tiktok'    => get_theme_mod( 'tiktok', '' ),
 		'twitter'   => get_theme_mod( 'twitter', '' ),
 		'youtube'   => get_theme_mod( 'youtube', '' ),
 		'linkedin'  => get_theme_mod( 'linkedin', '' ),
