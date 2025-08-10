@@ -23,3 +23,4 @@ jobs:
           path: |
             /home/runner/work/rotaract-family
             !/home/runner/work/rotaract-family/rotaract-family/.*
+            !/home/runner/work/rotaract-family/rotaract-family/devenv*
