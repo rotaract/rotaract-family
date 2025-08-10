@@ -8,7 +8,18 @@ All notable changes to this project will be documented in this file.
 
 // The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog], and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
 
-== {compare}/v1.7.0\...main[Unreleased]
+== {compare}/v1.8.0\...main[Unreleased]
+
+== {compare}/v1.7.0\...v1.8.0[1.8.0] - 2025-08-10
+
+=== Changed
+
+* Disabled snowflake theme by default to avoid the step of disabling it for new websites.
+* Update social media icons, taken from https://fontawesome.com/#fa7[Font Awesome 7].
+
+=== Added
+
+* social media icon to link TikTok profile.
 
 == {compare}/v1.6.0\...v1.7.0[1.7.0] - 2023-02-22
 
