@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,5 +25,5 @@ jobs:
           name: rotaract-family
           path: |
             /home/runner/work/rotaract-family
-            !/home/runner/work/rotaract-family/rotaract-family/.*
             !/home/runner/work/rotaract-family/rotaract-family/devenv*
+          if-no-files-found: error
