@@ -24,6 +24,6 @@ jobs:
         with:
           name: rotaract-family
           path: |
-            /home/runner/work/rotaract-family
-            !/home/runner/work/rotaract-family/rotaract-family/devenv*
+            ./
+            !./devenv*
           if-no-files-found: error
