@@ -38,23 +38,33 @@ download_icon() {
     local name=$2
 	local save_name="${name#square-}"  # strip "square-" prefix
     local target="$ASSETS_DIR/$save_name.svg"
+	echo "$target" # hacky return
     curl -sSL "$BASE_URL/$style/$name.svg" -o "$target"
+}
+
+compress_icon() {
+    local icon_path=$1
+	svgo --multipass "$icon_path"
 }
 
 for icon in "${SOLID_ICONS[@]}"
 do
-	# Instead of solid style we could download some (not all) icons in regular style.
-	# To do so replace "solid" with "regular".
-    download_icon "solid" "$icon"
     COUNT=$((COUNT + 1))
     progress "$COUNT" "$TOTAL"
+
+	# Instead of solid style we could download some (not all) icons in regular style.
+	# To do so replace "solid" with "regular".
+	path=$(download_icon "solid" "$icon")
+	compress_icon "$path"
 done
 
 for icon in "${BRAND_ICONS[@]}"
 do
-    download_icon "brands" "$icon"
     COUNT=$((COUNT + 1))
     progress "$COUNT" "$TOTAL"
+
+	path=$(download_icon "brands" "$icon")
+	compress_icon "$path"
 done
 
 echo -e "\nDownload completed: $TOTAL icons saved in $ASSETS_DIR"
