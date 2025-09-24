@@ -243,7 +243,7 @@ body.separate-containers .site-header.grid-container {
 	width: 22px;
 }
 
-.social-media-link img {
+.social-media-link svg {
 	max-height: 100%;
 	max-width: 100%;
 }
