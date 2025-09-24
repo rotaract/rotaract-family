@@ -144,15 +144,15 @@ function rotaract_family_controls( $wp_customize ) {
 		'default' => false
 	) );
 	$wp_customize->add_control(
-        new WP_Customize_Control( $wp_customize, 'snowflakes', array(
+		new WP_Customize_Control( $wp_customize, 'snowflakes', array(
 			'label'          => __('Let it snow', 'rotaract-family'),
 			'description'    => __('Activate for snow effect.', 'rotaract-family'),
 			'settings'       => 'snowflakes',
 			'section'        => 'generate_general_section',
 			'type'           => 'checkbox',
 			'allow_addition' => true
-        ) )
-    );
+		) )
+	);
 
 	// SECTION Social Media
 	$wp_customize->add_section( 'social-media', array(
@@ -326,41 +326,41 @@ function listSocialItems() {
 
 add_action( 'customize_register', 'rotaract_family_color_controls', 21 );
 function rotaract_family_color_controls( $wp_customize ) {
-    GeneratePress_Customize_Field::add_title(
-        'generate_social_media_head_colors_title',
-        array(
-            'section' => 'generate_colors_section',
-            'title' => __( 'Social Media Head', 'rotaract-family' ),
-            'choices' => array(
-                'toggleId' => 'social-media-head-colors',
-            ),
-        )
-    );
+	GeneratePress_Customize_Field::add_title(
+		'generate_social_media_head_colors_title',
+		array(
+			'section' => 'generate_colors_section',
+			'title' => __( 'Social Media Head', 'rotaract-family' ),
+			'choices' => array(
+				'toggleId' => 'social-media-head-colors',
+			),
+		)
+	);
 
-    GeneratePress_Customize_Field::add_field(
-        'generate_settings[social_media_head_color]',
-        'GeneratePress_Customize_Color_Control',
-        array(
-            'default' => 'var(--rotaract)',
-            'transport' => 'postMessage',
-            'sanitize_callback' => 'generate_sanitize_rgba_color',
-        ),
-        array(
-            'label' => __( 'Background', 'generatepress' ),
-            'section' => 'generate_colors_section',
-            'settings' => 'generate_settings[social_media_head_color]',
-            'choices' => array(
-                'alpha' => true,
-                'toggleId' => 'social-media-head-colors',
-            ),
-            'output' => array(
-                array(
-                    'element'  => '.social-media-head',
-                    'property' => 'background-color',
-                ),
-            ),
-        )
-    );
+	GeneratePress_Customize_Field::add_field(
+		'generate_settings[social_media_head_color]',
+		'GeneratePress_Customize_Color_Control',
+		array(
+			'default' => 'var(--rotaract)',
+			'transport' => 'postMessage',
+			'sanitize_callback' => 'generate_sanitize_rgba_color',
+		),
+		array(
+			'label' => __( 'Background', 'generatepress' ),
+			'section' => 'generate_colors_section',
+			'settings' => 'generate_settings[social_media_head_color]',
+			'choices' => array(
+				'alpha' => true,
+				'toggleId' => 'social-media-head-colors',
+			),
+			'output' => array(
+				array(
+					'element'  => '.social-media-head',
+					'property' => 'background-color',
+				),
+			),
+		)
+	);
 }
 
 
