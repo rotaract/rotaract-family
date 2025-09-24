@@ -26,4 +26,5 @@ jobs:
           path: |
             ./
             !./devenv*
+            !./bin
           if-no-files-found: error
