@@ -20,12 +20,11 @@ function generate_social_menu() {
 					$icon = 'email' === $type ? 'envelop' : $type;
 
 					echo sprintf(
-						'<a href="%2$s" title="%1$s" target="_blank" rel="noreferrer" class="social-media-link">',
+						'<a href="%2$s" title="%1$s" target="_blank" rel="noreferrer" class="social-media-link">%3$s</a>',
 						ucfirst( $type ),
-						'email' === $type ? 'mailto:' . antispambot( is_email( $link ) ) : $link
+						'email' === $type ? 'mailto:' . antispambot( is_email( $link ) ) : $link,
+						file_get_contents(get_stylesheet_directory_uri() . '/assets/img/socialmedia/' . $icon . '.svg')
 					);
-					include get_stylesheet_directory_uri() . '/assets/img/socialmedia/' . $icon . '.svg';
-					echo '</a>';
 				}
 				?>
 			</div>
