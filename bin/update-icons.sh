@@ -2,7 +2,7 @@
 
 # -----------------------------------------------------------------------------
 # Description : Downloads selected Font Awesome icons (solid + brands).
-#               Brand icons are saved without "square-" prefix if present.
+#               Icons are saved without "square-" prefix if present.
 #
 # Author      : Benno Bielmeier
 # -----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ mkdir -p "$ASSETS_DIR"
 FA_VERSION="7.0.1"
 BASE_URL="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/refs/tags/$FA_VERSION/svgs"
 
-SOLID_ICONS=("envelope")
+SOLID_ICONS=("square-envelope")
 BRAND_ICONS=("square-facebook" "square-github" "square-instagram" "square-linkedin"
              "tiktok" "square-twitter" "square-xing" "square-youtube")
 
