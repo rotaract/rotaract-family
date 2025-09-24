@@ -35,6 +35,8 @@ image::preview.webp[Screenshot of theme 'Rotaract Family']
   Compatible with all plugins available in Rotaract Hosting. And many more in the future!
 . *Multilingualism* +
   Translations available for English and German.
+. *Social Media Menu* +
+  Link your social media profiles with the latest https://fontawesome.com/[Font Awesome Icons]
 
 *Are you missing any features or languages?*
 Feel free telling us and {github-repo}/issues/new[open a new issue] describing your ideas.
