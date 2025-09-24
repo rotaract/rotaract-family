@@ -190,6 +190,21 @@ function rotaract_family_controls( $wp_customize ) {
 			)
 		) )
 	);
+	$wp_customize->add_setting( 'whatsapp', array(
+		'type' => 'theme_mod'
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Control( $wp_customize, 'whatsapp', array(
+			'label'       => 'WhatsApp',
+			'section'     => 'social-media',
+			'settings'    => 'whatsapp',
+			'type'        => 'url',
+			'input_attrs' => array(
+				'placeholder' => 'https://whatsapp.com/channel/my-rotaract-channel-id',
+				'pattern'     => 'https:\/\/(whatsapp\.com\/channel\/.+|wa.me\/\d+)',
+			)
+		) )
+	);
 	$wp_customize->add_setting( 'tiktok', array(
 		'type' => 'theme_mod'
 	) );
