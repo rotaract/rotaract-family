@@ -23,7 +23,7 @@ function generate_organization_logo() {
 	$separator = get_theme_mod( 'logo_layout', 'club' ) === 'club' ? '' : '<path fill="#7F7F7F" d="M714.24 0h2.83v215.96h-2.83z"/>';
 
 	return sprintf(
-		'<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 753.57 215.96" class="logo" overflow="visible">%1$s%2$s%3$s</svg>',
+		'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 753.57 215.96" class="logo" overflow="visible">%1$s%2$s%3$s</svg>',
 		$brands[ get_theme_mod( 'org_type', 'rac' ) ],
 		$wheel,
 		$separator

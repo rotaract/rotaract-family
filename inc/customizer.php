@@ -329,6 +329,7 @@ function listSocialItems() {
 	return array(
 		'facebook'  => get_theme_mod( 'facebook', '' ),
 		'instagram' => get_theme_mod( 'instagram', '' ),
+		'whatsapp'  => get_theme_mod( 'whatsapp', '' ),
 		'tiktok'    => get_theme_mod( 'tiktok', '' ),
 		'twitter'   => get_theme_mod( 'twitter', '' ),
 		'youtube'   => get_theme_mod( 'youtube', '' ),
