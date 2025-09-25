@@ -1,14 +1,14 @@
 <?php
 
 $family_colors = array(
-	'rac' => '#d41367',   // cranberry
-	'iac' => '#00a2e0',   // skyblue
-	'rc'  => '#0067c8'    // azure
+	'rac' => 'var(--rotaract)',	// cranberry
+	'iac' => 'var(--sky-blue)',	// skyblue
+	'rc'  => 'var(--azure)'		// azure
 );
 $wheel_colors  = array(
-	'rac' => '#d41367',   // cranberry
-	'iac' => '#00a2e0',   // skyblue
-	'rc'  => '#f7a81b'    // gold
+	'rac' => 'var(--rotaract)',	// cranberry
+	'iac' => 'var(--sky-blue)',	// skyblue
+	'rc'  => 'var(--gold)'		// gold
 );
 
 add_filter( 'generate_option_defaults', 'child_new_defaults' );
@@ -20,8 +20,8 @@ function child_new_defaults( $options ) {
 	$options['org_type']                = 'rac';
 	$options['logo_text_line_1']        = get_bloginfo( 'title' );
 	$options['background_color']        = 'var(--base-2)';
-	$options['link_color']              = 'var(--rotaract)';
-	$options['social_media_head_color'] = 'var(--rotaract)';
+	$options['link_color']              = 'var(--accent)';
+	$options['social_media_head_color'] = 'var(--accent)';
 	$options['global_colors']           = array(
 		array(
 			'name' => __( 'Contrast', 'generatepress' ),
