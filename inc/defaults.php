@@ -22,6 +22,7 @@ function child_new_defaults( $options ) {
 	$options['background_color']        = 'var(--base-2)';
 	$options['link_color']              = 'var(--accent)';
 	$options['social_media_head_color'] = 'var(--accent)';
+	$options['underline_links']         = 'never';
 	$options['global_colors']           = array(
 		array(
 			'name' => __( 'Contrast', 'generatepress' ),
@@ -144,6 +145,9 @@ add_filter( 'generate_color_option_defaults', 'child_new_color_defaults' );
  */
 function child_new_color_defaults( $options ) {
 	$options['footer_background_color'] = 'var(--slate)';
+	$options['footer_text_color'] = 'var(--base-2)';
+	$options['footer_link_color'] = 'var(--base-2)';
+	$options['footer_link_hover_color'] = 'var(--base-3)';
 
 	return $options;
 }
