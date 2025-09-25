@@ -154,8 +154,15 @@ add_filter( 'generate_font_option_defaults', 'child_new_font_defaults' );
  */
 function child_new_font_defaults( $options ) {
 	$options['font_body']        = 'Open Sans';
-	$options['body_font_size']   = '15';
-	$options['footer_font_size'] = '13';
+	$options['body_font_size']   = '16';
+	$options['footer_font_size'] = '14';
 
 	return $options;
+}
+
+add_filter( 'generate_editor_styles', 'child_load_styles');
+function child_load_styles( $editor_styles ) {
+    $editor_styles[] = 'style.css';
+
+    return $editor_styles;
 }
