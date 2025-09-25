@@ -24,6 +24,7 @@ All notable changes to this project will be documented in this file.
 === Added
 
 * Social media icon to link WhatsApp channel or single chat.
+* Bash script for updating social media icons from https://fontawesome.com[Font Awesome].
 
 == {compare}/v1.7.0\...v1.8.0[1.8.0] - 2025-08-10
 
@@ -35,7 +36,6 @@ All notable changes to this project will be documented in this file.
 === Added
 
 * Social media icon to link TikTok profile.
-* Bash script for updating social media icons from https://fontawesome.com[Font Awesome].
 
 == {compare}/v1.6.0\...v1.7.0[1.7.0] - 2023-02-22
 
