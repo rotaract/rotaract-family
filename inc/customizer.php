@@ -230,8 +230,8 @@ function rotaract_family_controls( $wp_customize ) {
 			'settings'    => 'twitter',
 			'type'        => 'url',
 			'input_attrs' => array(
-				'placeholder' => 'https://twitter.com/my-rotaract-club',
-				'pattern'     => 'https:\/\/(www\.)?twitter\.com\/.*',
+				'placeholder' => 'https://x.com/my-rotaract-club',
+				'pattern'     => 'https:\/\/(www\.)?x\.com\/.*',
 			)
 		) )
 	);
