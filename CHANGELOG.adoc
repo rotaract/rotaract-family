@@ -15,11 +15,13 @@ All notable changes to this project will be documented in this file.
 === Fixed
 
 * Club logo positioning.
+* Default colors, especially in footer.
 
 === Changed
 
 * Full usage of default colors and typography, replacing hardcoded styles.
 * Embedded social media icons as part of HTML, making usage of CSS rules.
+* Updated X (Twitter) name and icon.
 
 === Added
 
