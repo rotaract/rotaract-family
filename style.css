@@ -5,7 +5,7 @@
  Author:       Ressort IT Entwicklung - Rotaract Deutschland Komitee
  Author URI:   https://rotaract.de/ueber-rotaract/rdk/ressort-it-entwicklung/
  Template:     generatepress
- Version:      1.8.0
+ Version:      1.9.0
  Text Domain:  rotaract-family
  Domain Path:  /languages/
 */
@@ -105,14 +105,6 @@
 /*
  * Child theme stylings
  */
-
-html, body, .sidebar .widget, .footer-widgets .widget {
-	font-size: 15px;
-}
-
-body, h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', sans-serif;
-}
 
 /* Header */
 
@@ -237,7 +229,7 @@ body.separate-containers .site-header.grid-container {
 }
 
 .social-media-link {
-	color: #ffffff;
+	color: var(--base-3);
 	margin: 0 5px;
 	height: 22px;
 	width: 22px;
@@ -250,10 +242,6 @@ body.separate-containers .site-header.grid-container {
 
 
 /* Footer */
-
-footer.site-info {
-	font-size: 13px;
-}
 
 @media (min-width: 769px) {
 	.separate-containers .site-footer.grid-container .site-info {

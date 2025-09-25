@@ -39,7 +39,7 @@ function generate_social_menu() {
 function generate_construct_site_title() {
 	$text_colors       = array(
 		'rac' => '#d41367',   // cranberry
-		'iac' => '#019fcb',   // skyblue
+		'iac' => '#00a2e0',   // skyblue
 		'rc'  => '#17458f'    // royal blue
 	);
 	$generate_settings = wp_parse_args(
