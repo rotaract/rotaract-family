@@ -237,7 +237,7 @@ body.separate-containers .site-header.grid-container {
 }
 
 .social-media-link {
-	color: #ffffff;
+	color: var(--base-3);
 	margin: 0 5px;
 	height: 22px;
 	width: 22px;
