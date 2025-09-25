@@ -225,7 +225,7 @@ function rotaract_family_controls( $wp_customize ) {
 	) );
 	$wp_customize->add_control(
 		new WP_Customize_Control( $wp_customize, 'twitter', array(
-			'label'       => 'Twitter',
+			'label'       => 'X (Twitter)',
 			'section'     => 'social-media',
 			'settings'    => 'twitter',
 			'type'        => 'url',

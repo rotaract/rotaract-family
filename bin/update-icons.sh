@@ -17,7 +17,7 @@ BASE_URL="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/refs/tags/$
 
 SOLID_ICONS=("square-envelope")
 BRAND_ICONS=("square-facebook" "square-github" "square-instagram" "square-linkedin"
-             "tiktok" "square-twitter" "square-xing" "square-youtube" "square-whatsapp")
+             "tiktok" "square-x-twitter" "square-xing" "square-youtube" "square-whatsapp")
 
 TOTAL=$(( ${#SOLID_ICONS[@]} + ${#BRAND_ICONS[@]} ))
 COUNT=0

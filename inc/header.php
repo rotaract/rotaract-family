@@ -17,7 +17,7 @@ function generate_social_menu() {
 			<div class="social-media-menu">
 				<?php
 				foreach ( $items as $type => $link ) {
-					$icon = 'email' === $type ? 'envelop' : $type;
+					$icon = 'email' === $type ? 'envelope' : ('twitter' === $type ? 'x-twitter' : $type);
 
 					echo sprintf(
 						'<a href="%2$s" title="%1$s" target="_blank" rel="noreferrer" class="social-media-link">%3$s</a>',
