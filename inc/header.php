@@ -23,7 +23,7 @@ function generate_social_menu() {
 						'<a href="%2$s" title="%1$s" target="_blank" rel="noreferrer" class="social-media-link">%3$s</a>',
 						ucfirst( $type ),
 						'email' === $type ? 'mailto:' . antispambot( is_email( $link ) ) : $link,
-						file_get_contents(get_stylesheet_directory_uri() . '/assets/img/socialmedia/' . $icon . '.svg')
+						file_get_contents(get_stylesheet_directory() . '/assets/img/socialmedia/' . $icon . '.svg')
 					);
 				}
 				?>
