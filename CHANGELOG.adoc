@@ -10,6 +10,10 @@ All notable changes to this project will be documented in this file.
 
 == {compare}/v1.9.0\...main[Unreleased]
 
+=== Added
+
+* Add checkbox to customizer to enable or disable the confirmation dialag that used to pop-up when a site visitor clicks on a link referencing a external site.
+
 == {compare}/v1.8.0\...v1.9.0[1.9.0] - 2025-09-25
 
 === Fixed

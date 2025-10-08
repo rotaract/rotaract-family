@@ -124,7 +124,15 @@ msgstr "Lass es schneien"
 msgid "Activate for snow effect."
 msgstr "Aktivieren, um Schneefall auf der Seite zu haben."
 
-#: inc/customizer.php:148
+#: inc/customizer.php:163
+msgid "Link Confirmation"
+msgstr "Link-Bestätigung"
+
+#: inc/customizer.php:164
+msgid "Confirm link navigation to external webpages."
+msgstr "Bestätige das Verlassen auf eine externe Seite."
+
+#: inc/customizer.php:176
 msgid "Link your Social Media accounts."
 msgstr "Füge die URL für jedes soziale Profil hinzu."
 
