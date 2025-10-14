@@ -104,7 +104,15 @@ msgstr ""
 msgid "Activate for snow effect."
 msgstr ""
 
-#: inc/customizer.php:148
+#: inc/customizer.php:163
+msgid "Link Confirmation"
+msgstr ""
+
+#: inc/customizer.php:164
+msgid "Confirm link navigation to external webpages."
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Link your Social Media accounts."
 msgstr ""
 

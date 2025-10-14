@@ -154,6 +154,21 @@ function rotaract_family_controls( $wp_customize ) {
 		) )
 	);
 
+	$wp_customize->add_setting( 'link_confirmation', array(
+		'type' => 'theme_mod',
+		'default' => true
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Control( $wp_customize, 'link_confirmation', array(
+			'label'          => __('Link Confirmation', 'rotaract-family'),
+			'description'    => __('Confirm link navigation to external webpages.', 'rotaract-family'),
+			'settings'       => 'link_confirmation',
+			'section'        => 'generate_general_section',
+			'type'           => 'checkbox',
+			'allow_addition' => true
+		) )
+	);
+
 	// SECTION Social Media
 	$wp_customize->add_section( 'social-media', array(
 		'title'       => 'Social Media',
