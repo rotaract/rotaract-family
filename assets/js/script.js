@@ -14,10 +14,3 @@ if ( linkConfirmationEnabled ) {
 		})
 	});
 }
-
-if (
-	typeof Snowflakes === 'function' &&
-	!window.matchMedia('(prefers-reduced-motion: reduce)').matches
-) {
-	new Snowflakes();
-}
