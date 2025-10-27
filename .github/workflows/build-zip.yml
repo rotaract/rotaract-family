@@ -20,7 +20,7 @@ jobs:
           php wp-cli.phar i18n make-mo languages
           rm wp-cli.phar
       - name: Upload theme
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: rotaract-family
           path: |
