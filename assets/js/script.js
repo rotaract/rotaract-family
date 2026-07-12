@@ -14,7 +14,3 @@ if ( linkConfirmationEnabled ) {
 		})
 	});
 }
-
-if ( typeof Snowflakes === 'function' ) {
-	new Snowflakes();
-}
